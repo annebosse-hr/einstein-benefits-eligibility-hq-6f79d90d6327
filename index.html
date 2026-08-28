@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow, noarchive, nosnippet">
+<title>Benefits Eligibility & Variable-Hour Strategy · Project HQ</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&family=Bebas+Neue&display=swap');
+
+  :root {
+    --orange: #EF8B22;
+    --blue:   #0979C3;
+    --navy:   #1B3A5C;
+    --ink:    #2A2A2A;
+    --gray:   #6B6B6B;
+    --light:  #F7F5F1;
+    --line:   #E5E1DA;
+    --teal:   #0E8F84;
+    --red:    #C0392B;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'Roboto', -apple-system, sans-serif;
+    background: var(--light);
+    color: var(--ink);
+    line-height: 1.55;
+  }
+
+  .wrap { max-width: 1020px; margin: 0 auto; padding: 56px 36px 100px; }
+
+  .eyebrow {
+    font-size: .72rem; font-weight: 700; letter-spacing: 3px;
+    text-transform: uppercase; color: var(--orange); margin-bottom: 10px;
+  }
+  h1 {
+    font-family: 'Bebas Neue', sans-serif; font-size: 3.2rem; line-height: 1;
+    letter-spacing: 1px; color: var(--navy); margin-bottom: 12px;
+  }
+  .lede { font-size: 1.05rem; color: var(--gray); max-width: 760px; }
+  .meta { font-size: .78rem; color: #999; margin-top: 12px; }
+  .header-links { margin-top: 18px; display: flex; gap: 10px; flex-wrap: wrap; }
+  .header-links a {
+    display: inline-flex; align-items: center; gap: 7px;
+    background: var(--navy); color: #fff; text-decoration: none;
+    font-size: .82rem; font-weight: 700; padding: 9px 18px;
+    border-radius: 8px; letter-spacing: .3px;
+  }
+  .header-links a.primary { background: var(--orange); }
+
+  .feature {
+    margin-top: 36px; background: #fff; border: 1px solid var(--line);
+    border-left: 4px solid var(--orange); border-radius: 12px; padding: 26px 28px;
+  }
+  .feature .ft-eyebrow {
+    font-size: .68rem; font-weight: 800; letter-spacing: 2.5px;
+    text-transform: uppercase; color: var(--orange); margin-bottom: 8px;
+  }
+  .feature h2 { font-size: 1.35rem; color: var(--navy); margin-bottom: 10px; }
+  .feature p { font-size: .95rem; color: var(--gray); margin-bottom: 14px; }
+  .stat-row { display: flex; gap: 34px; flex-wrap: wrap; margin: 18px 0 6px; }
+  .stat-val { font-family: 'Bebas Neue', sans-serif; font-size: 2rem; color: var(--navy); line-height: 1; }
+  .stat-label { font-size: .74rem; color: var(--gray); margin-top: 4px; max-width: 160px; }
+
+  .section-head { margin-top: 64px; margin-bottom: 24px; }
+  .section-head h2 { font-family: 'Bebas Neue', sans-serif; font-size: 2.1rem; letter-spacing: .5px; color: var(--navy); }
+  .section-head p { font-size: .92rem; color: var(--gray); max-width: 720px; margin-top: 6px; }
+
+  .phases { display: flex; flex-direction: column; gap: 14px; }
+  .phase {
+    display: flex; gap: 20px; background: #fff; border: 1px solid var(--line);
+    border-radius: 12px; padding: 22px 24px;
+  }
+  .ph-num {
+    font-family: 'Bebas Neue', sans-serif; font-size: 1.7rem; color: var(--line);
+    min-width: 44px; line-height: 1;
+  }
+  .phase h3 { font-size: 1.02rem; color: var(--navy); margin-bottom: 6px; }
+  .phase p { font-size: .88rem; color: var(--gray); }
+  .ph-status {
+    display: inline-block; font-size: .64rem; font-weight: 800; letter-spacing: 1.5px;
+    text-transform: uppercase; padding: 3px 10px; border-radius: 20px; margin-left: 8px;
+    vertical-align: 2px; background: #eee; color: var(--gray);
+  }
+  .phase.done   { border-left: 4px solid var(--teal); }
+  .phase.done .ph-status { background: #E2F3F1; color: var(--teal); }
+  .phase.now    { border-left: 4px solid var(--orange); }
+  .phase.now .ph-status  { background: #FDEEDC; color: var(--orange); }
+  .phase.next   { border-left: 4px solid var(--line); opacity: .85; }
+  .item-list { margin-top: 12px; display: flex; flex-direction: column; gap: 8px; }
+  .item { font-size: .85rem; color: var(--ink); padding-left: 22px; position: relative; }
+  .item::before { content: '○'; position: absolute; left: 0; color: var(--gray); }
+  .item.done::before { content: '●'; color: var(--teal); }
+  .item .added { font-size: .72rem; color: var(--orange); font-weight: 700; }
+
+  .card-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(290px, 1fr)); gap: 16px; }
+  .card { background: #fff; border: 1px solid var(--line); border-radius: 12px; padding: 20px 22px; }
+  .card-icon { font-size: 1.4rem; margin-bottom: 10px; }
+  .card h3 { font-size: .98rem; color: var(--navy); margin-bottom: 6px; }
+  .card p { font-size: .84rem; color: var(--gray); margin-bottom: 10px; }
+  .card-links { display: flex; flex-direction: column; gap: 4px; }
+  .card-links a { font-size: .82rem; color: var(--blue); text-decoration: none; font-weight: 500; }
+  .card-links a:hover { text-decoration: underline; }
+  .card-links .muted { font-size: .76rem; color: #999; }
+
+  .changelog { display: flex; flex-direction: column; gap: 0; }
+  .log-entry {
+    display: flex; gap: 20px; padding: 16px 4px; border-bottom: 1px solid var(--line);
+  }
+  .log-date {
+    font-family: 'Bebas Neue', sans-serif; font-size: 1rem; color: var(--orange);
+    min-width: 92px; letter-spacing: .5px; padding-top: 2px;
+  }
+  .log-body { font-size: .88rem; color: var(--ink); }
+  .log-body .next { color: var(--gray); font-size: .82rem; display: block; margin-top: 3px; }
+
+  .q-list { display: flex; flex-direction: column; gap: 12px; }
+  .q-item { display: flex; gap: 16px; background: #fff; border: 1px solid var(--line); border-radius: 12px; padding: 18px 20px; }
+  .q-num {
+    font-family: 'Bebas Neue', sans-serif; font-size: 1.3rem; color: var(--orange);
+    min-width: 28px; line-height: 1.2;
+  }
+  .q-text { font-size: .88rem; color: var(--ink); }
+
+  /* ─── Data blocks ─── */
+  .databox { background: #fff; border: 1px solid var(--line); border-radius: 12px; padding: 24px 26px; margin-bottom: 18px; }
+  .databox h3 { font-size: 1.02rem; color: var(--navy); margin-bottom: 4px; }
+  .databox .sub { font-size: .82rem; color: var(--gray); margin-bottom: 16px; }
+
+  .threshold-row { display: flex; align-items: center; gap: 14px; margin-bottom: 12px; }
+  .threshold-label { width: 210px; font-size: .84rem; color: var(--ink); flex-shrink: 0; }
+  .threshold-bar-track { flex: 1; background: #EFEBE3; border-radius: 6px; height: 22px; position: relative; overflow: hidden; }
+  .threshold-bar-fill { height: 100%; border-radius: 6px; display: flex; align-items: center; justify-content: flex-end; padding-right: 8px; }
+  .threshold-bar-fill span { font-size: .74rem; font-weight: 700; color: #fff; }
+  .fill-aca { background: var(--red); }
+  .fill-25hr { background: var(--teal); }
+
+  table.datatable { width: 100%; border-collapse: collapse; font-size: .84rem; }
+  table.datatable th { text-align: left; font-size: .7rem; text-transform: uppercase; letter-spacing: .5px; color: var(--gray); padding: 8px 10px; border-bottom: 2px solid var(--line); }
+  table.datatable td { padding: 9px 10px; border-bottom: 1px solid var(--line); color: var(--ink); }
+  table.datatable tr:last-child td { font-weight: 700; background: #FAF8F4; }
+  table.datatable td.num, table.datatable th.num { text-align: right; }
+
+  footer { margin-top: 80px; font-size: .74rem; color: #999; border-top: 1px solid var(--line); padding-top: 18px; }
+
+  @media (max-width: 640px) {
+    .wrap { padding: 36px 20px 70px; }
+    h1 { font-size: 2.2rem; }
+    .phase, .q-item, .log-entry { flex-direction: column; gap: 8px; }
+    .threshold-row { flex-direction: column; align-items: flex-start; }
+    .threshold-label { width: auto; }
+    .threshold-bar-track { width: 100%; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="eyebrow">Employee Experience · Project HQ</div>
+  <h1>Benefits Eligibility &amp; Variable-Hour Strategy</h1>
+  <p class="lede">
+    Einstein currently makes every mover hired as "Full-Time" eligible for medical benefits after a 60-day wait,
+    with no hours test at enrollment — but the BCBS contract itself only covers people averaging 30+ hrs/week,
+    and Blue Cross's own definition is the ACA look-back standard. This project builds the data case for whether
+    to move movers to a true ACA variable-hour classification (measurement period → stability period) instead,
+    and if so, what measurement-period length and eligibility threshold make sense — ahead of the 2027 Open
+    Enrollment renewal conversation with Paul.
+  </p>
+  <p class="meta">Owner: Anne Bosse · Built with: Linda · Started: 8/28/2026 · Folder: repo root (see deliverables below)</p>
+
+  <div class="header-links">
+    <a class="primary" href="../benefits-eligibility-analysis-2026-08-28.md">Full analysis →</a>
+    <a href="../broker-guidance-variable-hour-transition-2026-08-28.md">Broker guidance (Cali/AJG)</a>
+    <a href="../memory/project_ajg_broker_transition.md">AJG broker-transition thread</a>
+  </div>
+
+  <div class="feature">
+    <div class="ft-eyebrow">Where it stands today</div>
+    <h2>Data and methodology are both settled — ready for the grandfathering/threshold/IMP decisions.</h2>
+    <p>
+      264 movers are coded Full-Time and benefits-eligible today; only 114 of them (43.5%) actually clear the
+      true ACA / BCBS-contract bar of 30 hrs/week averaged. The person-level join confirms the real exposure:
+      <strong>62.4% of currently-enrolled movers (53 of 85) are below the true ACA bar</strong> — about
+      $110,670/year in employer premium spend on coverage the ACA wouldn't require, concentrated hard in a
+      couple of branches. Turnover data says the measurement-period length choice is a real trade-off, not a
+      wash: 53% of movers who left in the last year never reached 12 months of tenure, vs. 37.8% who never
+      reached 6 months. The 20%-vs-43.5% ACA-clearance discrepancy from the 8/21 session is reconciled (see
+      below) — 43.5% is the number to use with Paul.
+    </p>
+    <div class="stat-row">
+      <div><div class="stat-val">264</div><div class="stat-label">FT-coded movers, active today</div></div>
+      <div><div class="stat-val">43.5%</div><div class="stat-label">actually clear the true 30 hr/wk ACA bar</div></div>
+      <div><div class="stat-val">62.4%</div><div class="stat-label">of enrolled movers are below the true ACA bar</div></div>
+      <div><div class="stat-val">$110.7K</div><div class="stat-label">annual employer spend on those below-bar enrollees</div></div>
+      <div><div class="stat-val">53%</div><div class="stat-label">of movers who left this year never hit 12 months' tenure</div></div>
+    </div>
+  </div>
+
+  <div class="section-head">
+    <div class="eyebrow">Data</div>
+    <h2>Who actually qualifies, by threshold</h2>
+    <p>262 of the 264 FT-coded movers have a computed average-monthly-hours figure across the trailing measurement
+    window (Sep 2025–Jul 2026, 11 complete months). Source: <code>FT Employee Monthly Hours - Aug 2025 to Aug 2026.xlsx</code>.</p>
+  </div>
+
+  <div class="databox">
+    <h3>Headcount clearing each threshold</h3>
+    <div class="sub">Out of 262 FT-coded movers with a computed monthly-hours average</div>
+
+    <div class="threshold-row">
+      <div class="threshold-label">130 hr/mo — true ACA / BCBS floor</div>
+      <div class="threshold-bar-track"><div class="threshold-bar-fill fill-aca" style="width:43.5%"><span>114 · 43.5%</span></div></div>
+    </div>
+    <div class="threshold-row">
+      <div class="threshold-label">108.3 hr/mo — proposed 25 hr/wk floor</div>
+      <div class="threshold-bar-track"><div class="threshold-bar-fill fill-25hr" style="width:73.7%"><span>193 · 73.7%</span></div></div>
+    </div>
+
+    <p style="font-size:.82rem; color:var(--gray); margin-top:14px;">
+      Lowering the internal threshold to 25 hrs/wk doesn't close the gap with your carrier contract — it widens it.
+      It adds 79 more "eligible" people beyond the true-ACA line, all still below the 30-hr floor BCBS's contract
+      defines as eligible. A 25-hr floor only makes sense paired with a plan-design or contract change, not as a
+      standalone internal policy tweak.
+    </p>
+  </div>
+
+  <div class="databox">
+    <h3>By mover title</h3>
+    <div class="sub">Lead In Training is 46% of the whole FT mover population and the least likely to clear any bar.</div>
+    <table class="datatable">
+      <tr><th>Title</th><th class="num">n</th><th class="num">Mean avg hrs/mo</th><th class="num">% ≥130 (true ACA)</th><th class="num">% ≥108.3 (25 hr/wk)</th></tr>
+      <tr><td>Lead In Training</td><td class="num">120</td><td class="num">111.0</td><td class="num">27.5%</td><td class="num">60.0%</td></tr>
+      <tr><td>Junior Lead</td><td class="num">37</td><td class="num">137.2</td><td class="num">62.2%</td><td class="num">89.2%</td></tr>
+      <tr><td>Part-Time Lead</td><td class="num">36</td><td class="num">132.9</td><td class="num">55.6%</td><td class="num">83.3%</td></tr>
+      <tr><td>Senior Lead</td><td class="num">18</td><td class="num">133.6</td><td class="num">50.0%</td><td class="num">88.9%</td></tr>
+      <tr><td>Regular Lead</td><td class="num">18</td><td class="num">130.7</td><td class="num">66.7%</td><td class="num">83.3%</td></tr>
+      <tr><td>Master Lead</td><td class="num">15</td><td class="num">133.3</td><td class="num">60.0%</td><td class="num">86.7%</td></tr>
+      <tr><td>HOF</td><td class="num">9</td><td class="num">127.5</td><td class="num">55.6%</td><td class="num">66.7%</td></tr>
+      <tr><td>Lead General</td><td class="num">9</td><td class="num">127.3</td><td class="num">33.3%</td><td class="num">88.9%</td></tr>
+      <tr><td>All movers</td><td class="num">262</td><td class="num">123.0</td><td class="num">43.5%</td><td class="num">73.7%</td></tr>
+    </table>
+  </div>
+
+  <div class="databox">
+    <h3>✅ Resolved: the 20% vs. 43.5% ACA-clearance discrepancy</h3>
+    <div class="sub">Same population, same ~123.8 hrs/mo mean, wildly different clearance rate between the 8/21 session (with Cali) and this pass. Tested both plausible methodologies directly against the Aug 2025–Jul 2026 dataset:</div>
+    <table class="datatable">
+      <tr><th>Methodology</th><th class="num">Result</th><th>Matches which figure?</th></tr>
+      <tr><td>Average hours across the full 11-month measurement period ≥130 — what the ACA look-back rule actually specifies</td><td class="num">114 / 262 = 43.5%</td><td>This session's figure</td></tr>
+      <tr><td>Clears 130 hrs/mo in a <em>majority</em> of individual months (≥6 of 11)</td><td class="num">54 / 262 = 20.6%</td><td><strong>The 8/21 "~20%" figure</strong></td></tr>
+      <tr><td>Clears 130 hrs/mo in <em>every</em> individual month (11 of 11)</td><td class="num">4 / 262 = 1.5%</td><td>Neither — ruled out</td></tr>
+    </table>
+    <p style="font-size:.82rem; color:var(--gray); margin-top:14px;">
+      The middle row is a near-exact match to "~20%" — the 8/21 pass most likely tested month-by-month consistency
+      rather than the period average, which penalizes normal month-to-month volatility (mover hours run a stdev
+      of ~34 on a mean of ~123) that the actual ACA rule doesn't test for. <strong>Use 43.5% going forward</strong> —
+      it's the number the regulation itself specifies. Saved to memory (<code>reference_aca_fulltime_hours_threshold</code>)
+      so this doesn't drift back to 20% in a future session.
+    </p>
+  </div>
+
+  <div class="databox">
+    <h3>Who actually signed up — Dec 2025 Benefit Census</h3>
+    <div class="sub">Rippling has no benefits/enrollment API endpoint (confirmed — a dozen candidate paths all 404'd). Real source: <code>2025 Benefit Census.xlsx</code> (Drive: Compensation &amp; Benefits → Benefits), December 2025 tab — the most recent month on file; no 2026 census exists yet, so this runs ~8 months behind the hours data above.</div>
+    <table class="datatable">
+      <tr><th>Status</th><th class="num">n (of 180 FT-coded movers in the census)</th><th class="num">%</th></tr>
+      <tr><td>Enrolled in medical</td><td class="num">85</td><td class="num">47.2%</td></tr>
+      <tr><td>Declined</td><td class="num">84</td><td class="num">46.7%</td></tr>
+      <tr><td>N/A (likely still in 60-day wait)</td><td class="num">11</td><td class="num">6.1%</td></tr>
+    </table>
+    <p style="font-size:.82rem; color:var(--gray); margin-top:14px;">
+      Avg cost for the 85 enrolled: <strong>$174.01/mo employer-paid</strong>, $181.71/mo employee-paid (blended
+      across single/spouse/child/family tiers). ⚠️ This section originally read 47.2% enrolled as "close to" the
+      43.5% true-ACA-clearance rate and guessed self-selection might be doing real work — <strong>the person-level
+      join below proves that guess wrong.</strong> Two aggregate rates being close doesn't mean they describe the
+      same people. Separately: 0 of the 84 who declined have a valid medical waiver on file — worth a quick
+      compliance gut-check with Cali alongside the ERISA wrap-doc / Section 125 gaps already in motion.
+    </p>
+  </div>
+
+  <div class="databox">
+    <h3>✅ Person-level join: who's actually enrolled AND below the ACA bar</h3>
+    <div class="sub">Matched all 180 FT-coded movers in the Dec 2025 census to their Rippling worker record via Employee Number ↔ <code>/workers</code> <code>number</code> field — 100% match rate (180 of 180) — then pulled each person's actual biweekly time-cards for Sep 2025–Jul 2026 and computed real average monthly hours.</div>
+    <p style="margin: 14px 0;">
+      <strong style="font-family:'Bebas Neue',sans-serif; font-size:1.6rem; color:var(--red);">53 of 85 enrolled movers (62.4%)</strong>
+      are below the true 130-hr/mo ACA bar — ≈$9,223/mo, <strong>≈$110,670/year</strong> in employer premium spend
+      on coverage the ACA itself wouldn't require. This is worse than the aggregate comparison above suggested,
+      not better.
+    </p>
+    <table class="datatable">
+      <tr><th>Branch</th><th class="num">Enrolled</th><th class="num">Enrolled &amp; below bar</th><th class="num">% below bar</th><th class="num">Branch avg hrs/mo</th></tr>
+      <tr><td>Garland</td><td class="num">3</td><td class="num">3</td><td class="num">100.0%</td><td class="num">108.9</td></tr>
+      <tr><td>North Austin</td><td class="num">16</td><td class="num">14</td><td class="num">87.5%</td><td class="num">103.5</td></tr>
+      <tr><td>Fort Worth</td><td class="num">10</td><td class="num">7</td><td class="num">70.0%</td><td class="num">100.8</td></tr>
+      <tr><td>Houston</td><td class="num">10</td><td class="num">7</td><td class="num">70.0%</td><td class="num">116.9</td></tr>
+      <tr><td>Leander</td><td class="num">6</td><td class="num">4</td><td class="num">66.7%</td><td class="num">121.0</td></tr>
+      <tr><td>North Dallas</td><td class="num">12</td><td class="num">7</td><td class="num">58.3%</td><td class="num">119.7</td></tr>
+      <tr><td>McKinney</td><td class="num">6</td><td class="num">3</td><td class="num">50.0%</td><td class="num">113.7</td></tr>
+      <tr><td>Tampa</td><td class="num">2</td><td class="num">1</td><td class="num">50.0%</td><td class="num">108.6</td></tr>
+      <tr><td>San Antonio</td><td class="num">7</td><td class="num">3</td><td class="num">42.9%</td><td class="num">101.3</td></tr>
+      <tr><td>South Austin</td><td class="num">13</td><td class="num">4</td><td class="num">30.8%</td><td class="num">134.0</td></tr>
+    </table>
+    <p style="font-size:.82rem; color:var(--gray); margin-top:14px;">
+      <strong>Garland and North Austin are the standout problem branches</strong> — effectively everyone enrolled
+      there is covered on hours that don't clear the ACA bar. <strong>South Austin is the standout on the other
+      end</strong> — the only branch clearing 130 hrs/mo on average. A blanket company-wide threshold change would
+      land very differently on South Austin than on Garland. <em>Caveat: Garland (n=3) and Tampa (n=2) are small
+      enough that one or two people swing the percentage heavily — read those two rows as directional.</em>
+      Methodology note: this pull (mean 114.0 hrs/mo across all 180) runs a bit lower than the Section-above
+      aggregate (mean 123.0 across 262) — different populations answering different questions, not a repeat of
+      the 20%-vs-43.5% error: this join is anchored to who was already on the books in Dec 2025 (the right cut
+      for measuring current over-coverage exposure), not today's full active roster.
+    </p>
+  </div>
+
+  <div class="databox">
+    <h3>✅ Investigated: why Garland and North Austin run low</h3>
+    <div class="sub">Pulled current headcount, title mix, tenure, and status by branch to test what's actually driving this, rather than guessing.</div>
+    <p style="font-size:.86rem; color:var(--ink); margin-bottom: 10px;">
+      <strong>Ruled out:</strong> trainee-heavy composition (North Austin's non-LIT Lead-level movers also average
+      only 107.4 hrs/mo — well below South Austin's 136.8) and a general "bigger branch = fewer hours" pattern
+      (headcount-vs-hours correlation across all 10 branches is weak, r=0.24 — South Austin and North Dallas are
+      both large <em>and</em> run above-average hours).
+    </p>
+    <p style="font-size:.86rem; color:var(--ink); margin-bottom: 10px;">
+      <strong>Garland — likely churn, not a stable branch running low.</strong> 4 of its 7 Dec-2025 cohort have
+      already left by Aug 2026 (57%, vs. 36% for North Austin and South Austin alike). Small (12-person crew today,
+      opened 2021), young (75% hired in 2026, avg tenure under 10 months) — reads as still rebuilding its crew.
+      n=7, directional not conclusive.
+    </p>
+    <p style="font-size:.86rem; color:var(--ink);">
+      <strong>North Austin — two things worth chasing, no single clean answer.</strong> Two individual records look
+      like data or leave-status anomalies: one Lead In Training shows 0.0 hrs/mo across all 24 tracked pay periods
+      while still marked ACTIVE; another (now Regular Lead) averages 24.9 hrs/mo across the same full window —
+      worth a leave-status check, not necessarily a branch problem. Removing those plus one churn case lifts the
+      branch median from 115.8 to 117–123 hrs/mo — but even then, North Austin's typical mover still runs below
+      South Austin's (median ~139.9). Turnover doesn't explain it (North Austin's 36% since-Dec-2025 termination
+      rate exactly matches South Austin's). North Austin is the single largest crew in the network by a wide
+      margin (60 active movers vs. a ~30-mover network average) — the remaining hypothesis is a job-volume-vs-crew-
+      size mismatch specific to this branch, which needs a direct conversation with North Austin's branch manager
+      or ops leadership to confirm — HR/payroll data can't settle it alone.
+    </p>
+  </div>
+
+  <div class="databox">
+    <h3>Tenure at termination — does a 6-month or 12-month measurement period matter?</h3>
+    <div class="sub">164 mover-title terminations in the trailing 12 months (of 1,596 terminated Rippling workers pulled, all history), with valid start/end dates.</div>
+    <table class="datatable">
+      <tr><th>Cut</th><th class="num">Movers who left before this point</th><th class="num">% of the 164</th></tr>
+      <tr><td>Before 1 month</td><td class="num">17</td><td class="num">10.4%</td></tr>
+      <tr><td>Before 3 months</td><td class="num">50</td><td class="num">30.5%</td></tr>
+      <tr><td>Before 6 months</td><td class="num">62</td><td class="num">37.8%</td></tr>
+      <tr><td>Before 11 months</td><td class="num">83</td><td class="num">50.6%</td></tr>
+      <tr><td>Before 12 months</td><td class="num">87</td><td class="num">53.0%</td></tr>
+    </table>
+    <p style="font-size:.82rem; color:var(--gray); margin-top:14px;">
+      Median tenure at termination: <strong>10.9 months</strong> (mean 18.1 — skewed up by long-tenure outliers; median
+      is the representative number). Reading it straight: a 12-month IMP filters out 53% of eventual-leavers before
+      they ever complete the measurement period and cost you a premium dollar. A 6-month IMP only filters out 37.8%
+      — about 15 points more of your eventual-leavers make it onto the books as covered. That's the real administrative-
+      ease-vs-cost trade you were already circling, now quantified.
+    </p>
+  </div>
+
+
+  <div class="section-head">
+    <div class="eyebrow">Progression</div>
+    <h2>The roadmap</h2>
+  </div>
+
+  <div class="phases">
+    <div class="phase done">
+      <div class="ph-num">01</div>
+      <div>
+        <h3>Data &amp; baseline analysis <span class="ph-status">Done</span></h3>
+        <p>Pulled and filtered the existing FT-hours dataset to mover titles; modeled ACA qualification at 130/108.3
+        hrs-per-month; pulled fresh termination data from Rippling for a tenure/turnover cut; received Cali's broker
+        guidance on the grandfathering options and IMP/stability-period mechanics; pulled the Dec 2025 Benefit Census
+        for actual medical enrollment + premium cost.</p>
+        <div class="item-list">
+          <div class="item done">FT mover population + hours-threshold modeling (130 / 108.3 hr/mo)</div>
+          <div class="item done">By-title breakdown</div>
+          <div class="item done">Tenure/turnover pull (164 terminated movers, trailing 12mo)</div>
+          <div class="item done">Broker guidance received (grandfathering options, 6-mo IMP example timeline)</div>
+          <div class="item done">Medical enrollment + premium cost pulled from Dec 2025 Benefit Census <span class="added">(added 8/28)</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="phase now">
+      <div class="ph-num">02</div>
+      <div>
+        <h3>Bring the decisions to Cali and Paul <span class="ph-status">Now</span></h3>
+        <p>All data and methodology questions are closed. What's left is judgment calls only Anne (and ultimately
+        Paul) can make, plus one optional documentation check.</p>
+        <div class="item-list">
+          <div class="item done">Pull medical enrollment census (Dec 2025 Benefit Census, Drive)</div>
+          <div class="item done">Get employer-paid premium PEPM ($174.01/mo employer, $181.71/mo employee avg)</div>
+          <div class="item done">Reconcile the 20% vs. 43.5% ACA-clearance discrepancy <span class="added">(resolved 8/28 — use 43.5%)</span></div>
+          <div class="item done">Person-level enrollment↔hours join, by branch <span class="added">(added 8/28 — 62.4% of enrolled below the ACA bar, ≈$110.7K/yr exposure)</span></div>
+          <div class="item">Confirm with Cali whether the 84-of-84 declined-without-valid-waiver finding is a real documentation gap</div>
+          <div class="item">Decide threshold, IMP length, and grandfathering approach (see Open Questions below)</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="phase next">
+      <div class="ph-num">03</div>
+      <div>
+        <h3>Build the Jan 1, 2027 rollout <span class="ph-status">Next</span></h3>
+        <p>Gated on Phase 2's decisions. Engage ETC to draft the variable-hour class + plan-document language;
+        build the eligibility-change notices and comms; confirm Rippling can flag measurement-threshold crossings
+        (same ask already live in the mover-promotion HQ's Rippling wishlist). Must land before 2027 Open Enrollment.</p>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="section-head">
+    <div class="eyebrow">Deliverables</div>
+    <h2>Everything this project has produced</h2>
+  </div>
+
+  <div class="card-grid">
+    <div class="card">
+      <div class="card-icon">📊</div>
+      <h3>Full data analysis</h3>
+      <p>All methodology, tables, and caveats behind the numbers on this page.</p>
+      <div class="card-links">
+        <a href="../benefits-eligibility-analysis-2026-08-28.md">Open →</a>
+        <span class="muted">Repo root: benefits-eligibility-analysis-2026-08-28.md</span>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-icon">📩</div>
+      <h3>Broker guidance — variable-hour transition</h3>
+      <p>Cali/AJG's guidance on grandfathering options and a 6-month-IMP example timeline aligned to Jan 1, 2027.</p>
+      <div class="card-links">
+        <a href="../broker-guidance-variable-hour-transition-2026-08-28.md">Open →</a>
+        <span class="muted">Repo root: broker-guidance-variable-hour-transition-2026-08-28.md</span>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-icon">🔗</div>
+      <h3>AJG broker-transition thread</h3>
+      <p>The broader context this sits inside — ERISA wrap-doc gap, Section 125 gap, ACA rehire-coding bug, active high-claimant renewal pressure.</p>
+      <div class="card-links">
+        <a href="../memory/project_ajg_broker_transition.md">Open →</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-icon">📁</div>
+      <h3>Source hours dataset</h3>
+      <p>Per-employee monthly hours, Aug 2025–Aug 2026, all FT-coded Rippling employees (277 hourly, 39 salaried).</p>
+      <div class="card-links">
+        <span class="muted">Repo root: FT Employee Monthly Hours - Aug 2025 to Aug 2026.xlsx</span>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-icon">🩺</div>
+      <h3>Source enrollment census</h3>
+      <p>Monthly per-subscriber benefits census, Jan–Dec 2025. December tab is the source for the enrollment/premium figures above.</p>
+      <div class="card-links">
+        <span class="muted">Drive: Compensation &amp; Benefits → Benefits → 2025 Benefit Census.xlsx</span>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="section-head">
+    <div class="eyebrow">Running log</div>
+    <h2>Changelog</h2>
+  </div>
+
+  <div class="changelog">
+    <div class="log-entry">
+      <div class="log-date">8/28/2026</div>
+      <div class="log-body">
+        Investigated why Garland and North Austin run low on hours. Pulled current headcount, title mix, tenure,
+        and status by branch. Ruled out trainee composition (North Austin's non-LIT movers are low too) and a
+        general size effect (headcount-vs-hours correlation across all 10 branches is weak, r=0.24). Garland looks
+        like churn — 57% of its Dec-2025 cohort has already left, and it's a small, young crew (75% hired in 2026).
+        North Austin has two individual records that look like leave/data anomalies (one shows 0.0 hrs/mo across
+        all 24 tracked pay periods while still ACTIVE) — but even removing those, its typical mover still runs
+        below South Austin's, and turnover doesn't explain the gap (both branches term at 36%). Landed on a
+        genuine job-volume-vs-crew-size question for North Austin (60 active movers, the largest crew in the
+        network) that needs branch-manager or ops input, not more HR data.
+        <span class="next">Next: get the two North Austin records checked for leave/status, raise the crew-sizing question with North Austin's branch manager or ops, then bring threshold/IMP/grandfathering decisions to Cali then Paul.</span>
+      </div>
+    </div>
+    <div class="log-entry">
+      <div class="log-date">8/28/2026</div>
+      <div class="log-body">
+        Ran the person-level enrollment↔hours join. Matched all 180 FT-coded movers in the Dec 2025 census to
+        their Rippling worker record via Employee Number ↔ <code>/workers</code> <code>number</code> field
+        (100% match rate), then pulled each person's real biweekly time-cards for Sep 2025–Jul 2026 directly
+        from Rippling. Result: <strong>53 of 85 enrolled movers (62.4%) are below the true 130-hr/mo ACA bar</strong>
+        — ≈$110,670/year in employer premium spend on coverage the ACA wouldn't require — worse than the earlier
+        aggregate comparison (47.2% enrolled vs. 43.5% qualified) suggested, and corrected that section's earlier
+        "self-selection may be doing work" reading accordingly. Broke it out by branch: Garland (100% of enrolled
+        below bar) and North Austin (87.5%) are the standout problem branches; South Austin (30.8%) is the standout
+        good one. Also removed the 120-hr comparison bar from the threshold chart and scrubbed remaining "120 hours"
+        references from this page per Anne's request — the corrected 130-hr figure stands on its own now.
+        <span class="next">Next: figure out what's driving Garland/North Austin's low hours, decide threshold/IMP/grandfathering with Cali, then bring the full picture to Paul.</span>
+      </div>
+    </div>
+    <div class="log-entry">
+      <div class="log-date">8/28/2026</div>
+      <div class="log-body">
+        20%-vs-43.5% ACA-clearance discrepancy reconciled. Tested both plausible methodologies against the Aug
+        2025–Jul 2026 dataset: averaging hours across the full 11-month period (what the ACA look-back rule
+        actually specifies) gives 43.5%; requiring 130 hrs/mo in a majority of individual months (≥6 of 11) gives
+        20.6% — a near-exact match to the 8/21 "~20%" figure. Conclusion: the 8/21 pass likely tested month-by-month
+        consistency instead of the period average, which the real rule doesn't test for. <strong>Use 43.5% going forward.</strong>
+        Also corrected Anne's standing statement of the ACA hours threshold to the right figure everywhere it
+        appears in this project's docs, and saved both corrections as a standing memory reference
+        (<code>reference_aca_fulltime_hours_threshold</code>) so they don't drift back in a future session.
+        <span class="next">Next: decide whether the person-level enrollment↔hours join is worth running, then bring threshold/IMP-length/grandfathering decisions to Cali then Paul.</span>
+      </div>
+    </div>
+    <div class="log-entry">
+      <div class="log-date">8/28/2026</div>
+      <div class="log-body">
+        Medical enrollment census pulled, closing the biggest data gap from this morning's first pass. Rippling's
+        API confirmed to have no benefits endpoint at all (dozen candidate paths, all 404 — not just a scope
+        restriction). Found the real source in Drive: <code>2025 Benefit Census.xlsx</code>, December 2025 tab
+        (most recent available — no 2026 census exists yet). Filtered to FT-coded mover Self-rows: 85 of 180
+        enrolled in medical (47.2%), at $174.01/mo employer cost avg — close enough to the 43.5% true-ACA-clearance
+        rate to suggest self-selection is already doing real work. Also surfaced: 0 of 84 who declined have a valid
+        medical waiver on file (flag for Cali), and a likely person-level join key (census Employee Number ↔
+        Rippling worker <code>number</code>) that would let a future pass find the exact overlap between "enrolled"
+        and "below the ACA bar."
+        <span class="next">Next: reconcile the 20%-vs-43.5% ACA-clearance discrepancy, decide whether to run the person-level enrollment↔hours join, then bring threshold/IMP-length/grandfathering decisions to Cali then Paul.</span>
+      </div>
+    </div>
+    <div class="log-entry">
+      <div class="log-date">8/28/2026</div>
+      <div class="log-body">
+        HQ stood up. First data pass complete: FT mover population (264, 262 with computed hours) filtered from
+        the existing hours dataset; ACA-threshold modeling at 130/108.3 hr/mo; fresh Rippling pull of all
+        terminated workers (1,596, all history) filtered to a 164-person trailing-12mo mover tenure cut; confirmed
+        no benefits-enrollment endpoint exists on the Rippling API token (dead end, needs a UI export or Cali's
+        census instead); logged Cali's broker guidance on grandfathering options.
+        <span class="next">Next: close the enrollment-census and premium-PEPM data gaps, reconcile the 20%-vs-43.5% ACA-clearance discrepancy, then bring the threshold/IMP-length/grandfathering decisions to Paul.</span>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="section-head">
+    <div class="eyebrow">Decision needed</div>
+    <h2>Open questions for Anne (and ultimately Paul)</h2>
+    <p>These aren't agent tasks — they're calls only Anne and Paul can make.</p>
+  </div>
+
+  <div class="q-list">
+    <div class="q-item">
+      <div class="q-num">1</div>
+      <div class="q-text"><strong>Do we move movers to a true ACA variable-hour classification, or keep the blanket-FT model and bolt on an hours test?</strong>
+      The current model (all FT-hired movers eligible after 60 days, no hours test) leaves ~150 currently-eligible movers below the BCBS
+      contract's 30-hr/wk floor. Variable-hour reclassification fixes that but delays eligibility for new hires until they complete a
+      measurement period — up to a year, depending on IMP length.</div>
+    </div>
+    <div class="q-item">
+      <div class="q-num">2</div>
+      <div class="q-text"><strong>Measurement-period length: 6 months or 11–12 months?</strong> Quantified trade-off above: a 6-month IMP
+      lets ~62% of eventual-leavers reach eligibility (vs. ~47% at 12 months) but also means more of them show up as a covered premium
+      before they wash out. A shorter IMP also risks a slow-season hire never accumulating enough hours within the window; a 12-month
+      IMP cascades over both a busy and slow season and is what the broker's example timeline assumes as the "standard" length for
+      ongoing employees, though their worked example uses 6 months keyed to a Jan 1 launch.</div>
+    </div>
+    <div class="q-item">
+      <div class="q-num">3</div>
+      <div class="q-text"><strong>Grandfathering: Option 1 or Option 2 (see broker guidance)?</strong> Option 1 keeps every currently-eligible
+      mover covered and applies the new variable-hour rules only to new hires going forward — lower employee-relations risk, slower to
+      close the carrier-contract gap. Option 2 runs current employees through a real measurement/transition period too — closes the gap
+      faster but risks eligibility disputes with people who've had coverage for years.</div>
+    </div>
+    <div class="q-item">
+      <div class="q-num">4</div>
+      <div class="q-text"><strong>Two North Austin records need an actual leave/status check.</strong> One Lead In Training shows
+      0.0 hrs/mo across all 24 tracked pay periods while still marked ACTIVE; another (now Regular Lead) averages 24.9 hrs/mo across
+      the same full window. Investigation (above) narrowed this to a data/HR question, not a branch-health guess — worth a direct
+      pull of these two people's actual status (LOA? stale record?) rather than more aggregate analysis.</div>
+    </div>
+    <div class="q-item">
+      <div class="q-num">5</div>
+      <div class="q-text"><strong>Worth a conversation with North Austin's branch manager or ops?</strong> Even after removing the
+      outlier records, North Austin's typical mover still runs below South Austin's — and North Austin is the largest crew in the
+      network by a wide margin (60 active movers vs. a ~30-mover network average). This is a job-volume-vs-crew-size question HR/payroll
+      data can't settle alone.</div>
+    </div>
+    <div class="q-item">
+      <div class="q-num">6</div>
+      <div class="q-text"><strong>Is the 84-of-84 declined-without-valid-waiver finding a real gap?</strong> If a valid waiver is
+      supposed to be on file for FT employees who decline coverage, this is a documentation gap worth folding into the same ETC
+      conversation already underway for the ERISA wrap doc and Section 125 POP document.</div>
+    </div>
+  </div>
+
+
+  <footer>
+    Benefits Eligibility &amp; Variable-Hour Strategy · Project HQ · maintained by Linda · last updated 8/28/2026 ·
+    internal use — do not share outside Einstein without Anne's OK
+  </footer>
+
+</div>
+</body>
+</html>
