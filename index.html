@@ -181,19 +181,19 @@
     <h2>Data and methodology are both settled — ready for the grandfathering/threshold/IMP decisions.</h2>
     <p>
       264 movers are coded Full-Time and benefits-eligible today; only 114 of them (43.5%) actually clear the
-      true ACA / BCBS-contract bar of 30 hrs/week averaged. The person-level join confirms the real exposure:
-      <strong>62.4% of currently-enrolled movers (53 of 85) are below the true ACA bar</strong> — about
-      $110,670/year in employer premium spend on coverage the ACA wouldn't require, concentrated hard in a
-      couple of branches. Turnover data says the measurement-period length choice is a real trade-off, not a
-      wash: 53% of movers who left in the last year never reached 12 months of tenure, vs. 37.8% who never
-      reached 6 months. The 20%-vs-43.5% ACA-clearance discrepancy from the 8/21 session is reconciled (see
-      below) — 43.5% is the number to use with Paul.
+      true ACA / BCBS-contract bar of 30 hrs/week averaged. The person-level join, refreshed against Anne's own
+      current 2026 enrollment report: <strong>41.8% of currently-enrolled movers (38 of 91) are below the true
+      ACA bar</strong> — about $79,350/year in employer premium spend on coverage the ACA wouldn't require,
+      concentrated hard in North Austin. Turnover data says the measurement-period length choice is a real
+      trade-off, not a wash: 53% of movers who left in the last year never reached 12 months of tenure, vs.
+      37.8% who never reached 6 months. The 20%-vs-43.5% ACA-clearance discrepancy from the 8/21 session is
+      reconciled (see below) — 43.5% is the number to use with Paul.
     </p>
     <div class="stat-row">
       <div><div class="stat-val">264</div><div class="stat-label">FT-coded movers, active today</div></div>
       <div><div class="stat-val">43.5%</div><div class="stat-label">actually clear the true 30 hr/wk ACA bar</div></div>
-      <div><div class="stat-val">62.4%</div><div class="stat-label">of enrolled movers are below the true ACA bar</div></div>
-      <div><div class="stat-val">$110.7K</div><div class="stat-label">annual employer spend on those below-bar enrollees</div></div>
+      <div><div class="stat-val">41.8%</div><div class="stat-label">of enrolled movers are below the true ACA bar</div></div>
+      <div><div class="stat-val">$79.4K</div><div class="stat-label">annual employer spend on those below-bar enrollees</div></div>
       <div><div class="stat-val">53%</div><div class="stat-label">of movers who left this year never hit 12 months' tenure</div></div>
     </div>
   </div>
@@ -262,56 +262,60 @@
   </div>
 
   <div class="databox">
-    <h3>Who actually signed up — Dec 2025 Benefit Census</h3>
-    <div class="sub">Rippling has no benefits/enrollment API endpoint (confirmed — a dozen candidate paths all 404'd). Real source: <code>2025 Benefit Census.xlsx</code> (Drive: Compensation &amp; Benefits → Benefits), December 2025 tab — the most recent month on file; no 2026 census exists yet, so this runs ~8 months behind the hours data above.</div>
+    <h3>Who actually signed up — 2026 Insurance Enrollment Report</h3>
+    <div class="sub">⚠️ Refreshed 8/28 — supersedes the Dec 2025 Benefit Census originally used here. Anne pulled <code>Insurance_enrollment_report-6a91dbba973d37d08fa05a20.xlsx</code> directly from Rippling: real names, current department, medical enrollment tier, covering the 2026 plan year (medical effective dates all fall in 2026). Matched 100% (568 of 568 "Movers"-dept rows) to a live Rippling worker record via name ↔ <code>/users</code> ↔ <code>/workers</code>.</div>
     <table class="datatable">
-      <tr><th>Status</th><th class="num">n (of 180 FT-coded movers in the census)</th><th class="num">%</th></tr>
-      <tr><td>Enrolled in medical</td><td class="num">85</td><td class="num">47.2%</td></tr>
-      <tr><td>Declined</td><td class="num">84</td><td class="num">46.7%</td></tr>
-      <tr><td>N/A (likely still in 60-day wait)</td><td class="num">11</td><td class="num">6.1%</td></tr>
+      <tr><th>Status</th><th class="num">n (of 282 active mover-title employees)</th><th class="num">%</th></tr>
+      <tr><td>Enrolled in medical (2026)</td><td class="num">91</td><td class="num">32.3%</td></tr>
+      <tr><td>Tier: EE (employee only)</td><td class="num">77</td><td class="num">—</td></tr>
+      <tr><td>Tier: EC (employee + child)</td><td class="num">10</td><td class="num">—</td></tr>
+      <tr><td>Tier: ES (employee + spouse)</td><td class="num">2</td><td class="num">—</td></tr>
+      <tr><td>Tier: EF (employee + family)</td><td class="num">2</td><td class="num">—</td></tr>
     </table>
     <p style="font-size:.82rem; color:var(--gray); margin-top:14px;">
-      Avg cost for the 85 enrolled: <strong>$174.01/mo employer-paid</strong>, $181.71/mo employee-paid (blended
-      across single/spouse/child/family tiers). ⚠️ This section originally read 47.2% enrolled as "close to" the
-      43.5% true-ACA-clearance rate and guessed self-selection might be doing real work — <strong>the person-level
-      join below proves that guess wrong.</strong> Two aggregate rates being close doesn't mean they describe the
-      same people. Separately: 0 of the 84 who declined have a valid medical waiver on file — worth a quick
-      compliance gut-check with Cali alongside the ERISA wrap-doc / Section 125 gaps already in motion.
+      Avg cost for enrollees: <strong>$174.01/mo employer-paid</strong>, $181.71/mo employee-paid (carried over
+      from the Dec 2025 census — this report has no cost field; reconfirm with Cali before using in a final
+      number). This population (282 active, mover-title, regardless of FT/PT) is a different cut than the 264
+      FT-specifically-coded figure above — both are real, they're just answering different questions.
     </p>
   </div>
 
   <div class="databox">
-    <h3>✅ Person-level join: who's actually enrolled AND below the ACA bar</h3>
-    <div class="sub">Matched all 180 FT-coded movers in the Dec 2025 census to their Rippling worker record via Employee Number ↔ <code>/workers</code> <code>number</code> field — 100% match rate (180 of 180) — then pulled each person's actual biweekly time-cards for Sep 2025–Jul 2026 and computed real average monthly hours.</div>
+    <h3>✅ Person-level join: who's actually enrolled AND below the ACA bar (refreshed 8/28)</h3>
+    <div class="sub">Same join, run against the current 2026 enrollment report instead of the stale Dec 2025 census. Pulled real biweekly time-cards for Sep 2025–Jul 2026 for all 91 currently-enrolled movers (58 already had this from the original pull; 33 newer hires needed a fresh pull) and computed actual average monthly hours.</div>
     <p style="margin: 14px 0;">
-      <strong style="font-family:'Bebas Neue',sans-serif; font-size:1.6rem; color:var(--red);">53 of 85 enrolled movers (62.4%)</strong>
-      are below the true 130-hr/mo ACA bar — ≈$9,223/mo, <strong>≈$110,670/year</strong> in employer premium spend
-      on coverage the ACA itself wouldn't require. This is worse than the aggregate comparison above suggested,
-      not better.
+      <strong style="font-family:'Bebas Neue',sans-serif; font-size:1.6rem; color:var(--red);">38 of 91 enrolled movers (41.8%)</strong>
+      are below the true 130-hr/mo ACA bar — ≈$6,612/mo, <strong>≈$79,350/year</strong> in employer premium spend
+      on coverage the ACA itself wouldn't require.
     </p>
     <table class="datatable">
-      <tr><th>Branch</th><th class="num">Enrolled</th><th class="num">Enrolled &amp; below bar</th><th class="num">% below bar</th><th class="num">Branch avg hrs/mo</th></tr>
-      <tr><td>Garland</td><td class="num">3</td><td class="num">3</td><td class="num">100.0%</td><td class="num">108.9</td></tr>
-      <tr><td>North Austin</td><td class="num">16</td><td class="num">14</td><td class="num">87.5%</td><td class="num">103.5</td></tr>
-      <tr><td>Fort Worth</td><td class="num">10</td><td class="num">7</td><td class="num">70.0%</td><td class="num">100.8</td></tr>
-      <tr><td>Houston</td><td class="num">10</td><td class="num">7</td><td class="num">70.0%</td><td class="num">116.9</td></tr>
-      <tr><td>Leander</td><td class="num">6</td><td class="num">4</td><td class="num">66.7%</td><td class="num">121.0</td></tr>
-      <tr><td>North Dallas</td><td class="num">12</td><td class="num">7</td><td class="num">58.3%</td><td class="num">119.7</td></tr>
-      <tr><td>McKinney</td><td class="num">6</td><td class="num">3</td><td class="num">50.0%</td><td class="num">113.7</td></tr>
-      <tr><td>Tampa</td><td class="num">2</td><td class="num">1</td><td class="num">50.0%</td><td class="num">108.6</td></tr>
-      <tr><td>San Antonio</td><td class="num">7</td><td class="num">3</td><td class="num">42.9%</td><td class="num">101.3</td></tr>
-      <tr><td>South Austin</td><td class="num">13</td><td class="num">4</td><td class="num">30.8%</td><td class="num">134.0</td></tr>
+      <tr><th>Branch</th><th class="num">Enrolled</th><th class="num">Enrolled &amp; below bar</th><th class="num">% below bar</th></tr>
+      <tr><td>North Austin</td><td class="num">15</td><td class="num">10</td><td class="num">66.7%</td></tr>
+      <tr><td>McKinney</td><td class="num">3</td><td class="num">2</td><td class="num">66.7%</td></tr>
+      <tr><td>Houston</td><td class="num">11</td><td class="num">6</td><td class="num">54.5%</td></tr>
+      <tr><td>Fort Worth</td><td class="num">4</td><td class="num">2</td><td class="num">50.0%</td></tr>
+      <tr><td>North Dallas</td><td class="num">21</td><td class="num">9</td><td class="num">42.9%</td></tr>
+      <tr><td>San Antonio</td><td class="num">6</td><td class="num">2</td><td class="num">33.3%</td></tr>
+      <tr><td>South Austin</td><td class="num">19</td><td class="num">5</td><td class="num">26.3%</td></tr>
+      <tr><td>Leander</td><td class="num">8</td><td class="num">2</td><td class="num">25.0%</td></tr>
+      <tr><td>Tampa</td><td class="num">3</td><td class="num">0</td><td class="num">0.0%</td></tr>
+      <tr><td>Garland</td><td class="num">1</td><td class="num">0</td><td class="num">0.0%</td></tr>
     </table>
     <p style="font-size:.82rem; color:var(--gray); margin-top:14px;">
-      <strong>Garland and North Austin are the standout problem branches</strong> — effectively everyone enrolled
-      there is covered on hours that don't clear the ACA bar. <strong>South Austin is the standout on the other
-      end</strong> — the only branch clearing 130 hrs/mo on average. A blanket company-wide threshold change would
-      land very differently on South Austin than on Garland. <em>Caveat: Garland (n=3) and Tampa (n=2) are small
-      enough that one or two people swing the percentage heavily — read those two rows as directional.</em>
-      Methodology note: this pull (mean 114.0 hrs/mo across all 180) runs a bit lower than the Section-above
-      aggregate (mean 123.0 across 262) — different populations answering different questions, not a repeat of
-      the 20%-vs-43.5% error: this join is anchored to who was already on the books in Dec 2025 (the right cut
-      for measuring current over-coverage exposure), not today's full active roster.
+      <strong>North Austin is still the standout problem branch</strong> (66.7% of its enrolled population is
+      below the ACA bar), consistent with the original pass. <strong>Garland has effectively fallen off the
+      table</strong> — only 1 person there is both currently active and enrolled, which confirms the churn story
+      below rather than contradicting it: Garland isn't a stable branch running low, it's lost almost everyone
+      who was ever on the books.
+    </p>
+    <p style="font-size:.82rem; color:var(--gray); margin-top:10px;">
+      ⚠️ <strong>This 41.8%/$79,350 figure supersedes the original 62.4%/$110,670 figure</strong> from the
+      Dec-2025-census pass. Both were computed correctly — they answer slightly different questions. The original
+      pass's population necessarily included people who've since left the company (someone who enrolled in Dec
+      2025, worked reduced hours near the end, and quit before today would count as "enrolled and below the bar"
+      there, despite costing nothing now). This pass is filtered to people <em>enrolled and actively employed
+      right now</em> — the number that reflects real ongoing exposure. <strong>Use 41.8% / $79,350 going
+      forward</strong> — including anywhere the earlier figure was already cited.
     </p>
   </div>
 
@@ -396,11 +400,11 @@
         <p>All data and methodology questions are closed. What's left is judgment calls only Anne (and ultimately
         Paul) can make, plus one optional documentation check.</p>
         <div class="item-list">
-          <div class="item done">Pull medical enrollment census (Dec 2025 Benefit Census, Drive)</div>
+          <div class="item done">Pull medical enrollment census <span class="added">(refreshed 8/28 with Anne's own 2026 enrollment report — supersedes the original Dec 2025 Benefit Census)</span></div>
           <div class="item done">Get employer-paid premium PEPM ($174.01/mo employer, $181.71/mo employee avg)</div>
           <div class="item done">Reconcile the 20% vs. 43.5% ACA-clearance discrepancy <span class="added">(resolved 8/28 — use 43.5%)</span></div>
-          <div class="item done">Person-level enrollment↔hours join, by branch <span class="added">(added 8/28 — 62.4% of enrolled below the ACA bar, ≈$110.7K/yr exposure)</span></div>
-          <div class="item">Confirm with Cali whether the 84-of-84 declined-without-valid-waiver finding is a real documentation gap</div>
+          <div class="item done">Person-level enrollment↔hours join, by branch <span class="added">(refreshed 8/28 — now 41.8% of enrolled below the ACA bar, ≈$79.4K/yr exposure)</span></div>
+          <div class="item">Confirm with Cali whether the declined-without-valid-waiver finding (from the original Dec 2025 pass) is a real documentation gap</div>
           <div class="item">Decide threshold, IMP length, and grandfathering approach (see Open Questions below)</div>
         </div>
       </div>
@@ -464,8 +468,17 @@
 
     <div class="card">
       <div class="card-icon">🩺</div>
-      <h3>Source enrollment census</h3>
-      <p>Monthly per-subscriber benefits census, Jan–Dec 2025. December tab is the source for the enrollment/premium figures above.</p>
+      <h3>2026 enrollment report (current source)</h3>
+      <p>Anne's own Rippling export — real names, current department, 2026 medical enrollment tier. The active source for the enrollment/join figures above as of 8/28.</p>
+      <div class="card-links">
+        <span class="muted">Insurance_enrollment_report-6a91dbba973d37d08fa05a20.xlsx</span>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-icon">🗄️</div>
+      <h3>Source enrollment census (superseded)</h3>
+      <p>Monthly per-subscriber benefits census, Jan–Dec 2025. Original source for the first enrollment pass — superseded 8/28 by the 2026 report above, kept for reference.</p>
       <div class="card-links">
         <span class="muted">Drive: Compensation &amp; Benefits → Benefits → 2025 Benefit Census.xlsx</span>
       </div>
@@ -479,6 +492,23 @@
   </div>
 
   <div class="changelog">
+    <div class="log-entry">
+      <div class="log-date">8/28/2026</div>
+      <div class="log-body">
+        Refreshed the enrollment analysis with Anne's own live 2026 insurance enrollment report (real names,
+        current department, 2026 medical tier), replacing the Dec-2025-census-based figures. Matched 100% (568
+        of 568) to Rippling worker records via name. New population: 282 currently-active mover-title employees,
+        91 enrolled (32.3%) for the 2026 plan year. Re-ran the person-level ACA-bar join against this cleaner set
+        (pulled fresh hours for 33 newer hires not covered by the original pull): <strong>38 of 91 enrolled movers
+        (41.8%) are below the true ACA bar — ≈$79,350/year</strong>, down from the original 62.4%/$110,670 figure.
+        The two numbers differ because the original pass's Dec 2025 population necessarily included people who've
+        since left the company; this pass is filtered to enrolled-and-active-today, the number that reflects real
+        ongoing exposure. North Austin remains the standout problem branch (66.7% of enrolled below bar); Garland's
+        enrolled population is now down to just 1 person, confirming the churn story from the earlier branch
+        investigation rather than contradicting it.
+        <span class="next">Next: use 41.8%/$79,350 in the Paul pulse (not the earlier 62.4%/$110,670 figure), then bring threshold/IMP/grandfathering decisions to Cali then Paul.</span>
+      </div>
+    </div>
     <div class="log-entry">
       <div class="log-date">8/28/2026</div>
       <div class="log-body">
