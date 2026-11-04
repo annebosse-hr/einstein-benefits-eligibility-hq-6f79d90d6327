@@ -136,6 +136,12 @@
   .threshold-bar-fill span { font-size: .74rem; font-weight: 700; color: #fff; }
   .fill-aca { background: var(--red); }
   .fill-25hr { background: var(--teal); }
+  .fill-warn { background: var(--orange); }
+  .banner {
+    background: #FDEEDC; border: 1px solid #F3D3AE; border-left: 4px solid var(--orange);
+    border-radius: 12px; padding: 16px 20px; font-size: .86rem; color: var(--ink); margin-bottom: 18px;
+  }
+  .banner strong { color: var(--navy); }
 
   table.datatable { width: 100%; border-collapse: collapse; font-size: .84rem; }
   table.datatable th { text-align: left; font-size: .7rem; text-transform: uppercase; letter-spacing: .5px; color: var(--gray); padding: 8px 10px; border-bottom: 2px solid var(--line); }
@@ -161,14 +167,15 @@
   <div class="eyebrow">Employee Experience · Project HQ</div>
   <h1>Benefits Eligibility &amp; Variable-Hour Strategy</h1>
   <p class="lede">
-    Einstein currently makes every mover hired as "Full-Time" eligible for medical benefits after a 60-day wait,
-    with no hours test at enrollment — but the BCBS contract itself only covers people averaging 30+ hrs/week,
-    and Blue Cross's own definition is the ACA look-back standard. This project builds the data case for whether
-    to move movers to a true ACA variable-hour classification (measurement period → stability period) instead,
-    and if so, what measurement-period length and eligibility threshold make sense — ahead of the 2027 Open
-    Enrollment renewal conversation with Paul.
+    Einstein used to make every mover hired as "Full-Time" eligible for medical after a 60-day wait with no hours
+    test, even though the BCBS contract only covers people averaging 30+ hrs/week. The plan since 10/22 was to
+    move every hourly mover to a Variable-Hour class from January 1, 2027, measured on January–October hours.
+    On 11/3 Gallagher's compliance attorney said that isn't how the rules work, and Cali agreed on the call:
+    start over. New hires can be Variable-Hour with their own initial measurement period; current employees get
+    a standard measurement period. This page tracks the reset, the numbers (now a ceiling, not a final count), and
+    the decisions still open.
   </p>
-  <p class="meta">Owner: Anne Bosse · Built with: Linda · Started: 8/28/2026 · Folder: repo root (see deliverables below)</p>
+  <p class="meta">Owner: Anne Bosse · Built with: Linda · Started: 8/28/2026 · Reset after the 11/3 Gallagher call: 11/3/2026 · Folder: repo root (see deliverables below)</p>
 
   <div class="header-links">
     <a class="primary" href="../benefits-eligibility-analysis-2026-08-28.md">Full analysis →</a>
@@ -177,25 +184,250 @@
   </div>
 
   <div class="feature">
-    <div class="ft-eyebrow">Where it stands today</div>
-    <h2>Data and methodology are both settled — ready for the grandfathering/threshold/IMP decisions.</h2>
+    <div class="ft-eyebrow">Where it stands today (11/3, after the Gallagher call)</div>
+    <h2>The 10/22 plan is off. New hires are Variable-Hour; current employees get a standard measurement period. How we handle 1/1/27 is not decided.</h2>
     <p>
-      264 movers are coded Full-Time and benefits-eligible today; only 114 of them (43.5%) actually clear the
-      true ACA / BCBS-contract bar of 30 hrs/week averaged. The person-level join, refreshed against Anne's own
-      current 2026 enrollment report: <strong>41.8% of currently-enrolled movers (38 of 91) are below the true
-      ACA bar</strong> — about $79,350/year in employer premium spend on coverage the ACA wouldn't require,
-      concentrated hard in North Austin. Turnover data says the measurement-period length choice is a real
-      trade-off, not a wash: 53% of movers who left in the last year never reached 12 months of tenure, vs.
-      37.8% who never reached 6 months. The 20%-vs-43.5% ACA-clearance discrepancy from the 8/21 session is
-      reconciled (see below) — 43.5% is the number to use with Paul.
+      Andrew Malahowski, Gallagher's compliance attorney, said Variable-Hour status only applies to <strong>new
+      hires</strong>: current employees can't be recoded as Variable-Hour, and grandfathering isn't available. Cali agreed on
+      the call: "start over, start now." New hires get an initial measurement period (10 months is allowed), then
+      administration, then a 12-month stability period. Current employees are measured on a <strong>standard
+      measurement period</strong>; Andrew says 99% of employers use 12 months of measurement with 12 months of stability,
+      and he questioned our January–October window. Whether that window can still serve as the first standard
+      period for a 1/1/27 change is a question for ETC, and the choice between that and keeping everyone covered
+      through 2027 is open (see Open Questions).
+    </p>
+    <p>
+      The 11/2 count is now a <strong>ceiling</strong>. 40 of 98 long-enrolled hourly movers averaged under 30 hours on
+      clocked time, but paid PTO, holiday, sick time, paid parental leave and STD (Einstein pays it 100%) all count as hours of service, and
+      clocked time leaves them out. Workers'-comp-only time doesn't count; FMLA is credited. Paul hears the TL;DR Wednesday 11/4.
     </p>
     <div class="stat-row">
-      <div><div class="stat-val">264</div><div class="stat-label">FT-coded movers, active today</div></div>
-      <div><div class="stat-val">43.5%</div><div class="stat-label">actually clear the true 30 hr/wk ACA bar</div></div>
-      <div><div class="stat-val">41.8%</div><div class="stat-label">of enrolled movers are below the true ACA bar</div></div>
-      <div><div class="stat-val">$79.4K</div><div class="stat-label">annual employer spend on those below-bar enrollees</div></div>
-      <div><div class="stat-val">53%</div><div class="stat-label">of movers who left this year never hit 12 months' tenure</div></div>
+      <div><div class="stat-val">40 of 98</div><div class="stat-label">hourly enrollees under 30 on clocked hours, Jan 1–Oct 31: a ceiling until paid time is added</div></div>
+      <div><div class="stat-val">135</div><div class="stat-label">enrolled in medical (34 salaried, 101 hourly) on the 11/2 report</div></div>
+      <div><div class="stat-val">12 + 12</div><div class="stat-label">measurement + stability months most employers use (Gallagher)</div></div>
+      <div><div class="stat-val">$20 → $25?</div><div class="stat-label">employee-only monthly premium, Cali's "baby steps"; Anne leans higher; undecided</div></div>
+      <div><div class="stat-val">11/6</div><div class="stat-label">Symetra + Blue Cross quotes due: 7-day STD with $10K life</div></div>
+      <div><div class="stat-val">+10.2%</div><div class="stat-label">negotiated renewal per the deck; Cali said "eleven percent" on the call, confirm</div></div>
     </div>
+  </div>
+
+  <div class="section-head">
+    <div class="eyebrow">11/3 reset</div>
+    <h2>What Gallagher and Cali changed</h2>
+    <p>Sources: the 11/3 Gallagher call (Cali Beeman, Katie Clark and Anne; Paul was in the Central Texas QGR),
+    Andrew Malahowski's written compliance answer to Cali, and Gallagher's "what counts as an hour of service" chart (IRS Notice 2015-87).
+    ETC has to confirm all of it in writing.</p>
+  </div>
+
+  <div class="databox">
+    <h3>The rules, before and after</h3>
+    <table class="datatable">
+      <tr><th>Topic</th><th>10/22–10/29 plan</th><th>After 11/3</th></tr>
+      <tr><td>Who is Variable-Hour</td><td>Every hourly mover, current and new, from 1/1/27</td><td>New hires only, if we reasonably can't predict their hours at hire. Current employees can't be recoded.</td></tr>
+      <tr><td>New hires</td><td>10-month measurement, then 12-month stability</td><td>Same idea, now confirmed: initial measurement starts on the hire date (or the 1st of the next month), 10 months is allowed (up to 12), then admin, then 12 months of stability. Each hire has their own period.</td></tr>
+      <tr><td>Current employees</td><td>Measure Jan 1–Oct 31, 2026, drop anyone under 30 on 1/1/27</td><td>Measured on a standard measurement period for ongoing employees. Gallagher says 12 + 12 is what 99% of employers use, and it lines up with a calendar plan year. Andrew questioned our Jan–Oct window.</td></tr>
+      <tr><td>Grandfathering</td><td>Off the table</td><td>Still off the table. Cali: "Start over. Start now."</td></tr>
+      <tr><td>People who drop</td><td>Not eligible 1/1, COBRA</td><td>Cali's view ("I believe so"): recode them as Variable-Hour so it doesn't look like removing an entitlement. Andrew says ongoing employees can't be recharacterized, so ETC has to confirm.</td></tr>
+      <tr><td>Medical carrier</td><td>Blue Cross, +10.2%</td><td>Staying with Blue Cross.</td></tr>
+    </table>
+    <p style="font-size:.82rem; color:var(--gray); margin-top:14px;">
+      Cali's caution: some employers track hours monthly and discipline people for low hours, and she called that a red flag.
+      The benefits hours test stays separate from Mover IQ attendance points.
+    </p>
+  </div>
+
+  <div class="databox">
+    <h3>What counts as an hour of service</h3>
+    <div class="sub">Our 11/2 count used clocked time entries. Payroll holds the rest of the paid time.</div>
+    <table class="datatable">
+      <tr><th>Type of time</th><th>Counts?</th><th>In our 11/2 count?</th></tr>
+      <tr><td>Hours worked and paid, including move and drive time</td><td>Yes</td><td>Yes</td></tr>
+      <tr><td>Paid PTO, holiday, sick time</td><td>Yes</td><td>Probably missing (PTO lives in payroll)</td></tr>
+      <tr><td>Paid parental leave</td><td>Yes (it's paid)</td><td>Missing</td></tr>
+      <tr><td>Short-term disability (Einstein pays the premium 100%)</td><td>Yes (excluded only if the employee paid all of it after tax)</td><td>Missing</td></tr>
+      <tr><td>Unpaid FMLA</td><td>Credit at the person's own average, or leave out of the average</td><td>Credited at own average (10/22 decision)</td></tr>
+      <tr><td>Workers'-comp-only leave</td><td>Not required</td><td>Not counted (use 37, not 34)</td></tr>
+      <tr><td>FMLA-equivalent leave (people below the federal FMLA test)</td><td>Not required by the ACA</td><td>Credited anyway; ETC should write it into the plan</td></tr>
+      <tr><td>Personal unpaid leave</td><td>No</td><td>Counted as zero</td></tr>
+    </table>
+    <p style="font-size:.82rem; color:var(--gray); margin-top:14px;">
+      Anyone near the line could cross 30 once paid time is added, so the 40 is a ceiling. A true recount needs a
+      payroll hours export with every earnings code for 11/1/25–10/31/26, which the Rippling API token can't read.
+      ETC still needs to say how to turn STD payments into hours, and how to code a workers'-comp absence that is also FMLA.
+    </p>
+  </div>
+
+  <div class="databox">
+    <h3>Two ways to handle 1/1/27 (not decided)</h3>
+    <table class="datatable">
+      <tr><th>Option</th><th>What it means</th><th>Trade-off</th></tr>
+      <tr><td>A. Keep current enrollees covered through 12/31/27 (recommended 11/3)</td><td>Make 11/1/26–10/31/27 the first standard measurement period, Nov–Dec the admin period for open enrollment, and the calendar year the stability period. No not-eligible notices this open enrollment.</td><td>Savings arrive in 2028, so roughly $80–90K of 2027 premium isn't saved. It avoids a 30% census drop that could trigger a re-rate and gives movers a clear year to work toward.</td></tr>
+      <tr><td>B. Ask ETC to bless a retroactive first period (Jan–Oct 2026, or Nov 2025–Oct 2026)</td><td>Keep the 1/1/27 change. About 40 come off on clocked hours (32 with the 29-hour cushion), fewer once paid time is added.</td><td>Neither Andrew nor Cali answered whether this is allowed. Needs ETC's written sign-off before any notice goes out, and the plan documents never had the rule.</td></tr>
+    </table>
+  </div>
+
+  <div class="databox">
+    <h3>Contributions, STD and next steps</h3>
+    <p style="font-size:.86rem; color:var(--ink); margin-bottom:10px;">
+      <strong>Contributions (not decided).</strong> Employee-only is $20 a month today. Cali's advice is baby steps: $25 this year, not $40,
+      with a small increase each year, and she says Paul won't accept a big jump. Anne leans toward a bigger increase. Benchmarks Cali
+      shared: employers typically pay 75–80%; the national employee-only average is $158 a month (she also quoted $149.90 for "all
+      industries", and it's unclear whether that's the same measure). A decision for Anne and Paul; Anne plans to work through the
+      model with Paul Friday 11/6. The $25 / $40 / $50 models are in the next box.
+    </p>
+    <p style="font-size:.86rem; color:var(--ink); margin-bottom:10px;">
+      <strong>STD and life.</strong> Cali sent STD back to Blue Cross because of the increase and claims; Blue Cross and Symetra are both quoting 7-day STD
+      with $10K basic life, numbers due Friday 11/6 so every decision lands in one round before Rippling is updated.
+    </p>
+    <p style="font-size:.86rem; color:var(--ink);">
+      <strong>Next.</strong> Anne emails ETC this week to book a discovery call (Heather and Marisha; ETC charges $250 an hour and Anne expects about
+      an hour) and uses the same call for the ERISA wrap update. ETC writes the policy, a handbook addendum with an employee acknowledgment,
+      and the plan-document language. Cali sends the 10-month visual and, once ETC approves it, it can go into employee comms and the benefit guide;
+      Katie and Cali Fowler start the benefit communications. Anne gives Paul the TL;DR Wednesday 11/4 and plans a recorded video for employees.
+      Not-eligible notices stay on hold until ETC signs off.
+    </p>
+  </div>
+
+  <div class="databox">
+    <h3>Contribution models Paul asked for: employees pay $25, $40 or $50 for EE-only (built 11/4)</h3>
+    <p class="sub">Built on Gallagher's 2027 renewal rates (+10.2%) and the 116-person census. The employer amount is a whole-dollar figure,
+    chosen so the EE-only cost on the cheapest plan ($5K HMO, $215.10 premium) lands on each target. Dependent tiers keep today's
+    add-ons (+$50 spouse, +$100 children, +$155 family). Not decided: Anne and Paul work through it Friday 11/6.</p>
+    <div style="overflow-x:auto;">
+    <table class="datatable">
+      <tr><th></th><th>$25 model</th><th>$40 model</th><th>$50 model</th></tr>
+      <tr><td>Employer pays per month (EE only / spouse / children / family)</td><td>$190 / $240 / $290 / $345</td><td>$175 / $225 / $275 / $330</td><td>$165 / $215 / $265 / $320</td></tr>
+      <tr><td>Employee pays, EE-only on the $5K HMO</td><td>$25.10</td><td>$40.10</td><td>$50.10</td></tr>
+      <tr><td>Increase for that employee vs. today ($20.01)</td><td>+$5.09</td><td>+$20.09</td><td>+$30.09</td></tr>
+      <tr><td>Employee pays, EE-only on the $500 PPO</td><td>$258.95</td><td>$273.95</td><td>$283.95</td></tr>
+      <tr><td><strong>Employer cost per year</strong></td><td><strong>$295,920</strong></td><td><strong>$275,040</strong></td><td><strong>$261,120</strong></td></tr>
+      <tr><td>Employer change vs. 2026</td><td>+$20,880</td><td>$0</td><td>&minus;$13,920</td></tr>
+      <tr><td>Employee share of the $5K HMO EE-only premium</td><td>11.7%</td><td>18.6%</td><td>23.3%</td></tr>
+      <tr><td>Cheapest plan under the ~$129 affordability line?</td><td>Yes</td><td>Yes</td><td>Yes</td></tr>
+    </table>
+    </div>
+    <p style="font-size:.82rem; color:var(--gray); margin-top:12px;">
+      <strong>Reading it.</strong> The $40 model is Gallagher's Option 1 to the dollar. The $25 model is close to Gallagher's Option 2; Option 2
+      puts the dependent tiers at $250 / $300 / $350, which costs $2,880 more a year. The "25%" share only holds for EE-only on the cheapest plan
+      (the $50 model gets to 23.3%); across every plan and tier, employees already pay about half of the total premium (50–55%) because
+      dependent coverage is expensive. The ~$129 affordability line came from Paul's note; confirm the 2027 figure with Cali or ETC before it
+      goes into open enrollment comms. Gallagher's workbook shows 104 enrolled because a total skips one $500 PPO row; the models use 116.
+      Dollar amounts don't change.
+    </p>
+  </div>
+
+  <div class="section-head">
+    <div class="eyebrow">Provisional numbers</div>
+    <h2>The 11/2 re-run on January–October clocked hours</h2>
+    <p>Source: Rippling Insurance Enrollment report saved 11/2 (135 enrolled), with clocked time entries from
+    January 1, 2026 (or hire date) through October 31, averaged per week. 30 hrs/wk = 130 hrs/mo. Group counts
+    only: the named list stays with Employee Experience. <strong>After 11/3 treat these as a ceiling:</strong> paid time
+    off, holiday, sick, paid parental leave and STD aren't in them yet, and Gallagher questioned the January–October window.</p>
+  </div>
+
+  <div class="databox">
+    <h3>The 98 long-enrolled hourly movers, by average weekly hours</h3>
+    <div class="sub">135 enrolled = 34 salaried + 101 hourly. Three of the hourly were August hires enrolled 11/1 after their 60-day wait; they are new hires under the 10/22 rule, so they are counted separately. Bar length is scaled to the largest group.</div>
+
+    <div class="threshold-row">
+      <div class="threshold-label">Under 25 hrs/wk</div>
+      <div class="threshold-bar-track"><div class="threshold-bar-fill fill-aca" style="width:29.3%"><span>17</span></div></div>
+    </div>
+    <div class="threshold-row">
+      <div class="threshold-label">25 to 28</div>
+      <div class="threshold-bar-track"><div class="threshold-bar-fill fill-aca" style="width:19%"><span>11</span></div></div>
+    </div>
+    <div class="threshold-row">
+      <div class="threshold-label">28 to 29</div>
+      <div class="threshold-bar-track"><div class="threshold-bar-fill fill-aca" style="width:6.9%"><span>4</span></div></div>
+    </div>
+    <div class="threshold-row">
+      <div class="threshold-label">29 to 30 (kept if the cushion holds)</div>
+      <div class="threshold-bar-track"><div class="threshold-bar-fill fill-warn" style="width:13.8%"><span>8</span></div></div>
+    </div>
+    <div class="threshold-row">
+      <div class="threshold-label">30 or more</div>
+      <div class="threshold-bar-track"><div class="threshold-bar-fill fill-25hr" style="width:100%"><span>58</span></div></div>
+    </div>
+
+    <p style="font-size:.82rem; color:var(--gray); margin-top:14px;">
+      40 under 30 as clocked; 8 of them sit at 29 to 30, so 32 come off if Gallagher's cushion is confirmed.
+      Another 4 sit at 28 to 29, where a punch fix could still change the list.
+    </p>
+  </div>
+
+  <div class="databox">
+    <h3>How the under-30 count moved as October came in</h3>
+    <div class="sub">Slow-season weeks pulled averages down, and hourly leavers who were all under 30 dropped out of the denominator along the way.</div>
+    <table class="datatable">
+      <tr><th>Run</th><th>Hours through</th><th class="num">Under 30</th></tr>
+      <tr><td>10/22 (first check)</td><td>10/18</td><td class="num">40 of 106</td></tr>
+      <tr><td>10/29, same basis (six under-30 leavers dropped out)</td><td>10/18</td><td class="num">34 of 100</td></tr>
+      <tr><td>10/29, one more week in</td><td>10/25</td><td class="num">38 of 100</td></tr>
+      <tr><td>11/2, October closed</td><td>10/31</td><td class="num">40 of 98</td></tr>
+    </table>
+    <p style="font-size:.82rem; color:var(--gray); margin-top:14px;">
+      October is now closed, so the count has stopped drifting. Hours came from clocked time entries. Time cards
+      (net of unpaid breaks) would add about 6 more people under 30, so ETC should confirm which counts as hours of service.
+    </p>
+  </div>
+
+  <div class="databox">
+    <h3>What stands out in the 40</h3>
+    <table class="datatable">
+      <tr><th>Cut</th><th class="num">People</th></tr>
+      <tr><td>Employee-only coverage</td><td class="num">36</td></tr>
+      <tr><td>Cover a child</td><td class="num">2</td></tr>
+      <tr><td>Cover a spouse</td><td class="num">2</td></tr>
+      <tr><td>Borderline (25 to 30 hrs/wk)</td><td class="num">23</td></tr>
+      <tr><td>Hired in 2026 (measured from their hire date)</td><td class="num">18</td></tr>
+      <tr><td>Here 5+ years (hear it from a person before a letter arrives)</td><td class="num">8</td></tr>
+      <tr><td>North Austin</td><td class="num">11</td></tr>
+      <tr><td>North Dallas</td><td class="num">8</td></tr>
+    </table>
+    <p style="font-size:.82rem; color:var(--gray); margin-top:14px;">
+      The same branch pattern the August analysis found: North Austin first, then North Dallas.
+    </p>
+  </div>
+
+  <div class="databox">
+    <h3>People on leave</h3>
+    <div class="sub">Decided 10/22: credit protected leave at the person's own average rate, and apply FMLA the same way at every branch.</div>
+    <table class="datatable">
+      <tr><th>How leave counts</th><th class="num">Under 30</th></tr>
+      <tr><td>Leave weeks count as zero hours</td><td class="num">40</td></tr>
+      <tr><td>Protected leave credited (FMLA, including WC for someone FMLA-eligible)</td><td class="num">37</td></tr>
+      <tr><td>Workers'-comp-only leave credited too (not legally required)</td><td class="num">34</td></tr>
+    </table>
+    <p style="font-size:.82rem; color:var(--gray); margin-top:14px;">
+      Three people cross 30 once protected leave is credited, and three more if WC-only is credited (one of those
+      credited rates rests on very few worked weeks and is unreliable). The 1,250-hour FMLA test has not been checked
+      against 2025 hours for the three who cross, so the 37 could move back up toward 40.
+    </p>
+  </div>
+
+  <div class="databox">
+    <h3>Cost and re-rate risk</h3>
+    <div class="sub">Savings are about $2,100 a year per employee-only enrollee at the flat $175 employer contribution. Approximate until 2027 rates are final.</div>
+    <table class="datatable">
+      <tr><th>Scenario</th><th class="num">Come off</th><th class="num">Savings at $175 / $190</th><th class="num">Drop vs. our 135</th><th class="num">Drop vs. Gallagher's 116</th></tr>
+      <tr><td>As clocked</td><td class="num">40</td><td class="num">$87.6K / $95.3K</td><td class="num">30%</td><td class="num">34%</td></tr>
+      <tr><td>With the 29-hour cushion</td><td class="num">32</td><td class="num">$70.2K / $76.3K</td><td class="num">24%</td><td class="num">28%</td></tr>
+    </table>
+    <p style="font-size:.82rem; color:var(--gray); margin-top:14px;">
+      A census drop of more than 10% lets carriers re-rate, so Cali's re-rate number in writing is still owed before
+      Paul decides. Gallagher's census shows 116 enrolled; our Rippling reports show 140 on 10/22, 134 on 10/29 and
+      135 on 11/2. Cali needs to give the census date so the two can be reconciled. Anyone who comes off can keep
+      coverage through COBRA at 102% of premium.
+    </p>
+  </div>
+
+  <div class="section-head">
+    <div class="eyebrow">Baseline (superseded)</div>
+    <h2>The August analysis, kept for context</h2>
+    <p>Everything below is the original 8/28 work on the Sep 2025–Jul 2026 window and the 2026 plan-year report.
+    It still supplies the method, the title and branch context and the tenure data. Its enrollment-exposure figures
+    (41.8%, about $79K) are replaced by the 10-month numbers above.</p>
   </div>
 
   <div class="section-head">
@@ -314,8 +546,8 @@
       pass's population necessarily included people who've since left the company (someone who enrolled in Dec
       2025, worked reduced hours near the end, and quit before today would count as "enrolled and below the bar"
       there, despite costing nothing now). This pass is filtered to people <em>enrolled and actively employed
-      right now</em> — the number that reflects real ongoing exposure. <strong>Use 41.8% / $79,350 going
-      forward</strong> — including anywhere the earlier figure was already cited.
+      right now</em> — the number that reflected real ongoing exposure on 8/28. <strong>Superseded 10/22 by the
+      10-month measurement</strong> (see the 11/2 re-run above) — don't cite 41.8% / $79,350 going forward.
     </p>
   </div>
 
@@ -393,30 +625,55 @@
       </div>
     </div>
 
-    <div class="phase now">
+    <div class="phase">
       <div class="ph-num">02</div>
       <div>
-        <h3>Bring the decisions to Cali and Paul <span class="ph-status">Now</span></h3>
-        <p>All data and methodology questions are closed. What's left is judgment calls only Anne (and ultimately
-        Paul) can make, plus one optional documentation check.</p>
+        <h3>First version of the rule, 10/22–10/29 <span class="ph-status">Superseded 11/3</span></h3>
+        <p>Cali's 10/22 guidance ruled out grandfathering, and Anne chose a 10-month Jan–Oct cycle with a Variable-Hour
+        class for every hourly mover. On 11/3 Gallagher's compliance attorney said Variable-Hour only applies to new hires
+        and recommended starting over. Kept below as history; grandfathering stays off, the 10-month new-hire period stays,
+        and the leave-credit decisions mostly hold.</p>
         <div class="item-list">
-          <div class="item done">Pull medical enrollment census <span class="added">(refreshed 8/28 with Anne's own 2026 enrollment report — supersedes the original Dec 2025 Benefit Census)</span></div>
-          <div class="item done">Get employer-paid premium PEPM ($174.01/mo employer, $181.71/mo employee avg)</div>
-          <div class="item done">Reconcile the 20% vs. 43.5% ACA-clearance discrepancy <span class="added">(resolved 8/28 — use 43.5%)</span></div>
-          <div class="item done">Person-level enrollment↔hours join, by branch <span class="added">(refreshed 8/28 — now 41.8% of enrolled below the ACA bar, ≈$79.4K/yr exposure)</span></div>
-          <div class="item">Confirm with Cali whether the declined-without-valid-waiver finding (from the original Dec 2025 pass) is a real documentation gap</div>
-          <div class="item">Decide threshold, IMP length, and grandfathering approach (see Open Questions below)</div>
+          <div class="item done">10-month measurement (Jan–Oct) + November–December administrative period <span class="added">(decided 10/22, replacing the 6-month compromise)</span></div>
+          <div class="item done">Grandfathering is not an option; today's enrollees are measured too <span class="added">(Cali, 10/22)</span></div>
+          <div class="item done">Protected leave credited at the person's own average; FMLA applied at every branch <span class="added">(10/22)</span></div>
+          <div class="item done">Two classes from 1/1/27: Full-Time (salaried + hourly regularly expected to work 30+) and Variable-Hour (all hourly movers + hourly staff whose hours can't be predicted) <span class="added">(10/23)</span></div>
+          <div class="item done">Conversion plan written for Paul, Cali, Jalissa, ETC and the regional managers <span class="added">(10/23, updated 11/2)</span></div>
+          <div class="item done">Renewal negotiated at +10.2% with a rate guarantee to 12/31/27 <span class="added">(Gallagher, 10/29)</span></div>
+          <div class="item done">Hours re-run on closed October, 135 enrolled <span class="added">(11/2)</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="phase now">
+      <div class="ph-num">03</div>
+      <div>
+        <h3>Reset with Gallagher, ETC and Paul <span class="ph-status">Now</span></h3>
+        <p>The 11/3 call and Andrew's answer reset the plan. The long-tenure calls and every notice stay on hold until ETC signs off.</p>
+        <div class="item-list">
+          <div class="item done">11/3 call with Cali, Katie Clark and Anne; Andrew Malahowski's compliance answer read <span class="added">(11/3)</span></div>
+          <div class="item done">Cross-checked Gallagher's hour-of-service chart: paid PTO/holiday/sick, paid parental leave and employer-paid STD count; WC-only doesn't <span class="added">(11/3)</span></div>
+          <div class="item">Email ETC for a discovery call (Heather, Marisha); draft saved in Gmail, not sent; also covers the ERISA wrap update</div>
+          <div class="item">Paul's TL;DR Wednesday 11/4, then pick the transition-year approach (A or B)</div>
+          <div class="item">Payroll hours export (all earnings codes, 11/1/25–10/31/26), then recount on all paid hours</div>
+          <div class="item">Contribution model with Paul Friday 11/6; Symetra and Blue Cross quotes on 7-day STD + $10K life due the same day</div>
+          <div class="item">Census date behind Gallagher's 116 vs. our 135, and the re-rate number in writing</div>
         </div>
       </div>
     </div>
 
     <div class="phase next">
-      <div class="ph-num">03</div>
+      <div class="ph-num">04</div>
       <div>
-        <h3>Build the Jan 1, 2027 rollout <span class="ph-status">Next</span></h3>
-        <p>Gated on Phase 2's decisions. Engage ETC to draft the variable-hour class + plan-document language;
-        build the eligibility-change notices and comms; confirm Rippling can flag measurement-threshold crossings
-        (same ask already live in the mover-promotion HQ's Rippling wishlist). Must land before 2027 Open Enrollment.</p>
+        <h3>Policy, plan documents and Rippling <span class="ph-status">Next</span></h3>
+        <p>Gated on ETC and the A-or-B choice. No not-eligible notices go out until ETC signs off in writing.</p>
+        <div class="item-list">
+          <div class="item">ETC writes the Variable-Hour policy, a handbook addendum with an employee acknowledgment, and the plan-document language (including how leave is credited)</div>
+          <div class="item">Heather helps set up ACA hours tracking in Rippling with the right pay codes (regular, move, drive, PTO, holiday, sick, paid parental, employer-paid STD; not WC-only)</div>
+          <div class="item">Cali's 10-month visual, branded once ETC approves; Katie and Cali Fowler start benefit comms; Anne records an employee video</div>
+          <div class="item">Open enrollment mid-November to early December; test enrollment in Rippling before real employees touch it; confirm 1095-C coding</div>
+          <div class="item">New hires from 1/1/27 start their initial measurement period; the plan year starts 1/1/27</div>
+        </div>
       </div>
     </div>
   </div>
@@ -467,11 +724,76 @@
     </div>
 
     <div class="card">
-      <div class="card-icon">🩺</div>
-      <h3>2026 enrollment report (current source)</h3>
-      <p>Anne's own Rippling export — real names, current department, 2026 medical enrollment tier. The active source for the enrollment/join figures above as of 8/28.</p>
+      <div class="card-icon">📋</div>
+      <h3>2027 Variable-Hour Benefits Conversion Plan</h3>
+      <p>The working plan for Paul, Cali, Jalissa, ETC and the regional managers: classes, who is affected, leave options, cost and re-rate risk, decisions, week-by-week steps, comms and manager talking points. Group counts only. Updated 11/2; <strong>out of date after 11/3 and needs a rewrite</strong> before Paul, Jalissa or the regional managers read it.</p>
       <div class="card-links">
-        <span class="muted">Insurance_enrollment_report-6a91dbba973d37d08fa05a20.xlsx</span>
+        <a href="https://claude.ai/artifact/KWyZWsX2g42eJAsE2Kt46V">Open →</a>
+        <span class="muted">Claude Doc, private until Anne shares it</span>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-icon">⚖️</div>
+      <h3>Gallagher compliance input (11/3)</h3>
+      <p>Andrew Malahowski's written answer to Cali: Variable-Hour is for new hires only, initial vs. standard measurement periods, and "start over." Pasted under Anne's ETC email draft.</p>
+      <div class="card-links">
+        <span class="muted">Email from Andrew Malahowski (Gallagher) via Cali Beeman</span>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-icon">🗂️</div>
+      <h3>What counts as an hour of service (Gallagher chart)</h3>
+      <p>Gallagher's 11-page chart (IRS Notice 2015-87): which paid and unpaid time counts toward the 30 hours. Source for the table above.</p>
+      <div class="card-links">
+        <a href="https://ajg.adobeconnect.com/_a815130238/p2nr43o016f/">Open →</a>
+        <span class="muted">Gallagher resource linked in Andrew's answer</span>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-icon">✉️</div>
+      <h3>ETC discovery-call email (draft)</h3>
+      <p>Books Heather and Marisha for the Variable-Hour policy, handbook addendum, plan-document language, Rippling setup and the ERISA wrap update. Asks for an hours estimate (ETC charges $250 an hour).</p>
+      <div class="card-links">
+        <span class="muted">Saved as a Gmail draft 11/3; not sent. Marisha's address still needed.</span>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-icon">🩺</div>
+      <h3>11/2 enrollment report (current source)</h3>
+      <p>Anne's Rippling Insurance Enrollment report saved 11/2: 135 enrolled in medical. The source for every enrollment figure in the 10-month numbers above. The 8/28 report it replaced is kept for the baseline section.</p>
+      <div class="card-links">
+        <span class="muted">Insurance_enrollment_report-6ae91b42ce91f16015f26ef4.xlsx</span>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-icon">🧮</div>
+      <h3>Named hours list (Employee Experience only)</h3>
+      <p>Each enrollee's weekly average, leave weeks, credited average and band, with a Method sheet. Never in the repo or on this page; names, hours and leave stay with Employee Experience.</p>
+      <div class="card-links">
+        <span class="muted">Local working file, 11/2 run</span>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-icon">📈</div>
+      <h3>Gallagher renewal deck + contribution workbook</h3>
+      <p>Cali's 10/29 materials: negotiated +10.2% renewal with a rate guarantee to 12/31/27, flat employer contribution scenarios, and the STD comparison.</p>
+      <div class="card-links">
+        <span class="muted">Sent by Anne 10/29; figures summarized in the plan doc</span>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-icon">🧮</div>
+      <h3>Contribution models: $25 / $40 / $50 (11/4)</h3>
+      <p>Gallagher's workbook with three model tabs and a side-by-side summary tab. Gallagher's own tabs are unchanged; each model's employee-only target is one yellow input cell.</p>
+      <div class="card-links">
+        <span class="muted">Local working file: Einstein_Employer Contribution Analysis_20270101 - EE 25-40-50 MODELS.xlsx</span>
       </div>
     </div>
 
@@ -492,6 +814,77 @@
   </div>
 
   <div class="changelog">
+    <div class="log-entry">
+      <div class="log-date">11/4/2026</div>
+      <div class="log-body">
+        Added the contribution models Paul asked for: employees pay $25, $40 or $50 for EE-only on the $5K HMO. Employer cost runs
+        $295,920 / $275,040 / $261,120 a year (+$20,880 / $0 / &minus;$13,920 vs. 2026); all three stay under the ~$129 affordability
+        line. The $40 model matches Gallagher's Option 1. New data box under "Contributions, STD and next steps", plus a deliverables card for the workbook.
+        <span class="next">Next: Anne picks today's dependent-tier spreads or Option 2's; Anne and Paul decide Friday 11/6.</span>
+      </div>
+    </div>
+    <div class="log-entry">
+      <div class="log-date">11/3/2026</div>
+      <div class="log-body">
+        <strong>Reset after the Gallagher call.</strong> Cali, Katie Clark and Anne met at 11:00 (Paul was in the Central Texas QGR). Cali
+        agreed with Gallagher's compliance attorney, Andrew Malahowski: Variable-Hour only applies to new hires, current employees can't be
+        recoded and can't be grandfathered, so "start over, start now." New hires from 2027 get a 10-month initial measurement period, then
+        2 months of admin, then 12 months of stability; current employees get a standard measurement period (Gallagher: 12 + 12 is the norm;
+        our Jan–Oct window was questioned). Medical stays with Blue Cross. Cross-checked Gallagher's hour-of-service chart: paid PTO, holiday,
+        sick, paid parental leave and STD count (Anne confirmed Einstein pays STD 100%), WC-only doesn't, FMLA is credited. The 11/2
+        count of 40 under 30 is now a ceiling. Contributions ($20 → $25 vs. bigger), STD/life quotes (due 11/6) and an ETC discovery call
+        are the next steps. The 10/22 decisions and the Variable-Hour Conversion Plan doc are superseded.
+        <span class="next">Next: email ETC, TL;DR for Paul Wednesday 11/4, payroll hours export for a recount, pick transition-year approach A or B.</span>
+      </div>
+    </div>
+    <div class="log-entry">
+      <div class="log-date">11/3/2026</div>
+      <div class="log-body">
+        HQ refreshed for the 10-month method. The top card, a new "10-month measurement" data section, the roadmap,
+        deliverables and open questions now reflect the decisions from 10/22 through 11/2. The August analysis stays
+        below as a labeled baseline, and its 41.8% / $79,350 figure is marked superseded.
+        <span class="next">Next: Paul, Cali and Anne decide at 11:00; then freeze the list, brief Brian and Mike, and send notices.</span>
+      </div>
+    </div>
+    <div class="log-entry">
+      <div class="log-date">11/2/2026</div>
+      <div class="log-body">
+        Re-ran hours on Anne's 11/2 enrollment report with October closed. 135 enrolled (34 salaried + 101 hourly);
+        three August hires enrolled 11/1 are counted separately as new hires. <strong>40 of the 98 long-enrolled
+        hourly movers average under 30 hrs/wk</strong> (32 if the 29-hour cushion holds); the count went 34 → 38 → 40
+        as the slow season came in. 37 under 30 with protected leave credited, 34 if WC-only is credited too. Savings
+        about $87.6K a year ($70.2K with the cushion); a 30% drop on our 135 (34% of Gallagher's 116).
+        <span class="next">Next: punch check on the 28–30 group, FMLA 1,250-hour check for the three who cross, Cali's census date and re-rate number.</span>
+      </div>
+    </div>
+    <div class="log-entry">
+      <div class="log-date">10/29/2026</div>
+      <div class="log-body">
+        Cali call and Gallagher deck: negotiated renewal +10.2% (vision moves to Blue Cross, rate guarantee to 12/31/27);
+        keep anyone averaging about 29+ enrolled this transition year, pending Gallagher compliance. Census mismatch
+        noted: Gallagher shows 116, our Rippling report 140. Paul + Cali + Anne set for Tuesday 11/3 at 11:00, so the
+        11/2 notice date slips. Anne decided to hold the long-tenure calls until the final decision. Hours re-run on a
+        new report (134 enrolled): 38 of 100 under 30 through 10/25.
+      </div>
+    </div>
+    <div class="log-entry">
+      <div class="log-date">10/23/2026</div>
+      <div class="log-body">
+        Anne decided two classes from 1/1/27: Full-Time (salaried + hourly regularly expected to work 30+ hrs/wk) and
+        Variable-Hour (all hourly movers + hourly staff whose hours can't be predicted at hire). Wrote the 2027
+        Variable-Hour Benefits Conversion Plan for Paul, Cali, Jalissa, ETC and the regional managers.
+      </div>
+    </div>
+    <div class="log-entry">
+      <div class="log-date">10/22/2026</div>
+      <div class="log-body">
+        Cali's email: grandfathering is not an option (only valid for a mid-year change), so every enrollee's hours get
+        measured. <strong>Anne decided a 10-month measurement period (Jan–Oct) with November–December for administration
+        and open enrollment</strong>, replacing the 6-month compromise floated with Paul. Leave method: credit protected
+        leave at the person's own average rate, FMLA applied across every branch. First hours check: 40 of 106 hourly
+        enrollees under 30 through 10/18.
+      </div>
+    </div>
     <div class="log-entry">
       <div class="log-date">8/28/2026</div>
       <div class="log-body">
@@ -585,58 +978,65 @@
 
   <div class="section-head">
     <div class="eyebrow">Decision needed</div>
-    <h2>Open questions for Anne (and ultimately Paul)</h2>
-    <p>These aren't agent tasks — they're calls only Anne and Paul can make.</p>
+    <h2>Open questions for Anne, Paul, Cali and ETC</h2>
+    <p>These aren't agent tasks. The first four are calls for Anne and Paul (TL;DR Wednesday 11/4). The next five wait on ETC, Gallagher or payroll. The older August items follow.
+    Settled by the 11/3 reset: no grandfathering, Variable-Hour for new hires only, medical stays with Blue Cross, FMLA credited and WC-only not.</p>
   </div>
 
   <div class="q-list">
     <div class="q-item">
       <div class="q-num">1</div>
-      <div class="q-text"><strong>Do we move movers to a true ACA variable-hour classification, or keep the blanket-FT model and bolt on an hours test?</strong>
-      The current model (all FT-hired movers eligible after 60 days, no hours test) leaves ~150 currently-eligible movers below the BCBS
-      contract's 30-hr/wk floor. Variable-hour reclassification fixes that but delays eligibility for new hires until they complete a
-      measurement period — up to a year, depending on IMP length.</div>
+      <div class="q-text"><strong>How do we handle 1/1/27 for current enrollees: Option A or Option B?</strong> A: keep everyone covered through 12/31/27 and make 11/1/26–10/31/27 the first standard measurement period (recommended 11/3; savings arrive in 2028; no re-rate risk from a 30% drop). B: ask ETC to bless a retroactive first period (Jan–Oct 2026 or Nov 2025–Oct 2026) and keep the 1/1/27 change. Anne hasn't picked.</div>
     </div>
     <div class="q-item">
       <div class="q-num">2</div>
-      <div class="q-text"><strong>Measurement-period length: 6 months or 11–12 months?</strong> Quantified trade-off above: a 6-month IMP
-      lets ~62% of eventual-leavers reach eligibility (vs. ~47% at 12 months) but also means more of them show up as a covered premium
-      before they wash out. A shorter IMP also risks a slow-season hire never accumulating enough hours within the window; a 12-month
-      IMP cascades over both a busy and slow season and is what the broker's example timeline assumes as the "standard" length for
-      ongoing employees, though their worked example uses 6 months keyed to a Jan 1 launch.</div>
+      <div class="q-text"><strong>Contribution increase.</strong> Employee-only is $20 a month. Cali recommends baby steps ($25 this year, not $40) and says Paul won't accept a big jump; Anne leans toward more. Benchmarks: employers typically pay 75–80%, national employee-only average $158 a month. Anne and Paul work through the model Friday 11/6.</div>
     </div>
     <div class="q-item">
       <div class="q-num">3</div>
-      <div class="q-text"><strong>Grandfathering: Option 1 or Option 2 (see broker guidance)?</strong> Option 1 keeps every currently-eligible
-      mover covered and applies the new variable-hour rules only to new hires going forward — lower employee-relations risk, slower to
-      close the carrier-contract gap. Option 2 runs current employees through a real measurement/transition period too — closes the gap
-      faster but risks eligibility disputes with people who've had coverage for years.</div>
+      <div class="q-text"><strong>STD and life.</strong> Blue Cross and Symetra are both quoting 7-day STD with $10K basic life, due Friday 11/6. Cali wants every decision made in one round so Rippling is updated in time. Compare against Mutual of Omaha's 14-day renewal (+16.9%) and the alternative (+61.5%).</div>
     </div>
     <div class="q-item">
       <div class="q-num">4</div>
-      <div class="q-text"><strong>Two North Austin records need an actual leave/status check.</strong> One Lead In Training shows
-      0.0 hrs/mo across all 24 tracked pay periods while still marked ACTIVE; another (now Regular Lead) averages 24.9 hrs/mo across
-      the same full window. Investigation (above) narrowed this to a data/HR question, not a branch-health guess — worth a direct
-      pull of these two people's actual status (LOA? stale record?) rather than more aggregate analysis.</div>
+      <div class="q-text"><strong>Which renewal number goes to Paul: +10.2% or &ldquo;eleven percent&rdquo;?</strong> Gallagher's 10/29 deck says +10.2% (rate guarantee through 12/31/27). Cali said she was shocked it came down to &ldquo;eleven percent&rdquo; on the 11/3 call. Confirm with her.</div>
     </div>
     <div class="q-item">
       <div class="q-num">5</div>
-      <div class="q-text"><strong>Worth a conversation with North Austin's branch manager or ops?</strong> Even after removing the
-      outlier records, North Austin's typical mover still runs below South Austin's — and North Austin is the largest crew in the
-      network by a wide margin (60 active movers vs. a ~30-mover network average). This is a job-volume-vs-crew-size question HR/payroll
-      data can't settle alone.</div>
+      <div class="q-text"><strong>ETC: how long is the standard measurement period for current employees, and can an earlier window count?</strong> Cali described 10 months of measuring inside a 12-month cycle but also said measurement and stability should match at 12. Neither she nor Andrew answered whether Jan–Oct 2026 can serve as the first standard period. Ask ETC first.</div>
     </div>
     <div class="q-item">
       <div class="q-num">6</div>
-      <div class="q-text"><strong>Is the 84-of-84 declined-without-valid-waiver finding a real gap?</strong> If a valid waiver is
-      supposed to be on file for FT employees who decline coverage, this is a documentation gap worth folding into the same ETC
-      conversation already underway for the ERISA wrap doc and Section 125 POP document.</div>
+      <div class="q-text"><strong>ETC: can people who drop be recoded as Variable-Hour?</strong> Cali said &ldquo;I believe so&rdquo; and called it the chance to do it without looking like removing an entitlement. Andrew says ongoing employees can't be recharacterized. ETC sets the rules for people who move between eligible and not eligible from year to year.</div>
+    </div>
+    <div class="q-item">
+      <div class="q-num">7</div>
+      <div class="q-text"><strong>Payroll hours export and the recount.</strong> A recount on all paid hours (PTO, holiday, sick, paid parental, employer-paid STD) needs a Rippling payroll export with every earnings code, 11/1/25–10/31/26; the API token can't read payroll. ETC also says how to turn STD payments into hours and how to code a WC absence that is also FMLA.</div>
+    </div>
+    <div class="q-item">
+      <div class="q-num">8</div>
+      <div class="q-text"><strong>FMLA-equivalent leave and the 1,250-hour check.</strong> We credit FMLA-equivalent leave everywhere, which is more generous than the ACA requires, so ETC writes it into the plan. The 1,250-hour test is still unchecked for the three who cross under leave credit.</div>
+    </div>
+    <div class="q-item">
+      <div class="q-num">9</div>
+      <div class="q-text"><strong>Gallagher: census date and re-rate number.</strong> Their census shows 116 enrolled; our Rippling reports show 135 on 11/2. The re-rate number is still not in writing. Matters most under Option B.</div>
+    </div>
+    <div class="q-item">
+      <div class="q-num">10</div>
+      <div class="q-text"><strong>Two North Austin records need an actual leave/status check.</strong> Still open from August.</div>
+    </div>
+    <div class="q-item">
+      <div class="q-num">11</div>
+      <div class="q-text"><strong>Worth a conversation with North Austin's branch manager or ops?</strong> North Austin has the most under-30 enrollees (11).</div>
+    </div>
+    <div class="q-item">
+      <div class="q-num">12</div>
+      <div class="q-text"><strong>Is the 84-of-84 declined-without-valid-waiver finding a real gap?</strong> Optional documentation check from the Dec 2025 pass; fold into the ETC conversation.</div>
     </div>
   </div>
 
 
   <footer>
-    Benefits Eligibility &amp; Variable-Hour Strategy · Project HQ · maintained by Linda · last updated 8/28/2026 ·
+    Benefits Eligibility &amp; Variable-Hour Strategy · Project HQ · maintained by Linda · last updated 11/3/2026 ·
     internal use — do not share outside Einstein without Anne's OK
   </footer>
 
