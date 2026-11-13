@@ -229,6 +229,31 @@
   </div>
 
   <div class="section-head">
+    <div class="eyebrow">Decisions</div>
+    <h2>How eligibility works from here (ETC call 11/6, confirmed 11/12)</h2>
+    <p>Alicia and Marisha at ETC confirmed each of these on the 11/6 call. The labels are internal to Einstein: under the ACA, all
+    that matters is whether an offer had to be made.</p>
+  </div>
+
+  <div class="databox">
+    <table class="datatable">
+      <tr><th>Who</th><th>Decision</th></tr>
+      <tr><td><strong>New field and hourly hires</strong></td><td>Hired as <strong>Variable-Hour</strong>, 100% across the board. 11-month initial measurement period (starts the 1st of the month after hire), 2-month admin period, then a 12-month stability period. About 13–14 months from hire to possible coverage.</td></tr>
+      <tr><td><strong>Salaried and office staff</strong></td><td>Full-time. Eligible the 1st of the month after 60 days, unchanged.</td></tr>
+      <tr><td><strong>Ongoing hourly employees</strong> (employed for a full standard measurement period)</td><td>Measured every <strong>Nov 1–Oct 31</strong>, admin Nov 1–Dec 31, stability Jan 1–Dec 31. They <strong>stay ongoing employees</strong>; they're never restarted as new hires.<br>Averaged 30+ → coded <strong>Variable-Hour, eligible</strong> for the next calendar year.<br>Averaged under 30 → coded <strong>Variable-Hour, not eligible</strong> for the next calendar year (COBRA offered if they were enrolled). Measured again the next year.</td></tr>
+      <tr><td><strong>2026 full-time hires</strong> who were offered coverage</td><td>Still technically new hires: invited to 1/1/27 open enrollment and ride out their first period. Expectation reset: keep 30+ hours to keep coverage.</td></tr>
+      <tr><td><strong>Promotions / fast track</strong> (e.g. Mover IQ)</td><td>Promotion into a full-time role → offer the 1st of the month after 60 days from the promotion. Only counts once the form reaches Employee Experience. Flag it in Rippling.</td></tr>
+      <tr><td><strong>Leave</strong></td><td>Only FMLA-protected leave (plus USERRA and jury duty) is taken out of the average. Workers' comp and disability count only when FMLA applies too.</td></tr>
+      <tr><td><strong>Rippling setup</strong></td><td>Current ACA setup stays (standard 11/1–10/31, 2-month admin, 11-month initial). Add eligibility classes for VH eligible / VH not eligible, plus flags for promoted, fast-tracked, offered early and removed. Have Rippling run its own eligibility report and check it against the manual list.</td></tr>
+      <tr><td><strong>Mid-year check</strong></td><td>June census: a preview for managers of who's trending under 30 during busy season.</td></tr>
+    </table>
+    <p style="font-size:.82rem; color:var(--gray); margin-top:12px;">
+      Risk to keep in mind: if someone who lost coverage gets subsidized Marketplace coverage and then works 130+ hours in a month, the
+      penalty is about $472.50 for that person for that month (ETC's 2027 figure). People who waived coverage carry no risk.
+    </p>
+  </div>
+
+  <div class="section-head">
     <div class="eyebrow">Final count, 11/12</div>
     <h2>21 long-enrolled hourly employees lose coverage January 1</h2>
     <p>Anne's final pass for Cameron and Paul. Every one of the 21 is coded full-time in Rippling but hasn't worked
@@ -823,7 +848,7 @@
           <div class="item">Open enrollment mid-November to early December; test enrollment in Rippling before real employees touch it; confirm 1095-C coding</div>
           <div class="item">New hires from 1/1/27 start their initial measurement period; the plan year starts 1/1/27</div>
           <div class="item">From December: every hourly offer letter and ClearCo/Rippling offer template says Variable-Hour, with the ~1-year benefits wait explained <span class="added">(decided 11/12)</span></div>
-          <div class="item">As people come off the plan 1/1/27, recategorize them in Rippling as Variable-Hour, benefits-ineligible <span class="added">(decided 11/12; confirm in writing)</span></div>
+          <div class="item">As people come off the plan 1/1/27, recategorize them in Rippling as Variable-Hour, benefits-ineligible <span class="added">(confirmed by ETC 11/6)</span></div>
         </div>
       </div>
     </div>
@@ -974,6 +999,15 @@
   </div>
 
   <div class="changelog">
+    <div class="log-entry">
+      <div class="log-date">11/12/2026</div>
+      <div class="log-body">
+        <strong>Decisions from the 11/6 ETC call.</strong> New "Decisions" table: new field hires Variable-Hour; ongoing employees stay ongoing and
+        are coded VH eligible / VH not eligible each year; 2026 hires ride out their first period; promotions/fast track get an offer the 1st
+        of the month after 60 days; only FMLA-protected leave is excluded; current Rippling setup stays; June mid-year census. Open Question 15 resolved.
+        <span class="next">Next: recap email to Alicia; mover-team comms; Rippling eligibility classes and flags.</span>
+      </div>
+    </div>
     <div class="log-entry">
       <div class="log-date">11/12/2026</div>
       <div class="log-body">
@@ -1236,7 +1270,7 @@
     </div>
     <div class="q-item">
       <div class="q-num">15</div>
-      <div class="q-text"><strong>Confirm in writing: recategorizing people who come off the plan as Variable-Hour.</strong> Gallagher's 11/3 answer said current employees can't be recoded as Variable-Hour, and the 10/22 guidance warned that switching an enrolled person's class mid-year is an IRS red flag. The 11/12 plan only recodes people <em>after</em> they lose eligibility at the end of a stability period, which may be fine. Get ETC or Cali to confirm that in writing before Rippling is changed, and before any notice uses the words "Variable-Hour."</div>
+      <div class="q-text"><strong>✅ Resolved (ETC 11/6): yes.</strong> Alicia: "variable hour eligible, variable hour not eligible is fine"; labels are internal, and the people stay ongoing employees. Recap to Alicia for the written record. <em>Original question:</em> <strong>Confirm in writing: recategorizing people who come off the plan as Variable-Hour.</strong> Gallagher's 11/3 answer said current employees can't be recoded as Variable-Hour, and the 10/22 guidance warned that switching an enrolled person's class mid-year is an IRS red flag. The 11/12 plan only recodes people <em>after</em> they lose eligibility at the end of a stability period, which may be fine. Get ETC or Cali to confirm that in writing before Rippling is changed, and before any notice uses the words "Variable-Hour."</div>
     </div>
     <div class="q-item">
       <div class="q-num">13</div>
